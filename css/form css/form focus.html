@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>focus form</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        .container{
+            width: 25%;
+            margin: 0 auto;
+            background-color:rgba(239, 255, 220, 0.696);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.573);
+        }
+        label{
+            display: block;
+            margin-bottom: 5px;
+            font-size: larger;
+            font: 1em sans-serif;
+        }
+        .input{
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            border: 3px solid  #ccc;
+        }
+        .input:focus{
+            border: 3px solid #007bff;
+        }
+        .btn{
+            background-color: crimson;
+            width: 50%;
+            height: 40px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            margin-left: 25%;
+            margin-bottom: 12px;
+            color: antiquewhite;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>form focus</h2>
+        <form action="">
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" class="input" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="E-mail" class="input" required>
+            <label for="password">password</label>
+            <input type="password" name="password" id="pw" class="input" required>
+            <!-- submit -->
+            <button type="submit" class="btn">login</button>
+      </form>
+    </div>
+
+</body>
+</html>

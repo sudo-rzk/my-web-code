@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outline</title>
+    <style>
+        /* outline:memberikan garis di luar border
+        Kapan Menggunakan Outline dan Offset Outline?
+Fokus: Memberikan penekanan visual pada elemen yang sedang difokuskan (misalnya, tombol yang sedang ditekan).
+Error: Menandai elemen yang mengandung error.
+Efek visual: Membuat efek visual yang menarik, seperti shadow atau highlight.
+Aksesibilitas: Outline dapat membantu pengguna dengan gangguan visual untuk lebih mudah melihat elemen yang aktif. */
+        div{
+            border: 2px solid black;
+            outline: red solid 10px;
+            margin: auto;  
+            padding: 20px;
+            text-align: center;
+        }
+        p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+
+#thin {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+#medium {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+#thick {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+#numeric{
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;}
+  /* shorhand */
+.div2{outline: solid 5px green} 
+ /*offset:Menentukan jarak offset outline dari tepi elemen/border. 
+          Nilai positif akan menggeser outline ke luar, 
+         sedangkan nilai negatif akan menggeser outline ke dalam.  */
+ .offset1{
+  margin: 30px;
+  border: 7px solid black;
+  background-color: chartreuse;
+  outline: 3px solid red;
+  outline-offset: 15px;
+ }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>hari ini hari yang cerah untuk jiwa yang sepi</p>
+    </div>
+    <h3>style outline</h3>
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">A groove border.</p>
+    <p class="ridge">A ridge border.</p>
+    <p class="inset">An inset border.</p>
+    <p class="outset">An outset border.</p>
+    <p class="none">No border.</p>
+    <p class="hidden">A hidden border.</p>
+    <p class="mix">A mixed border.</p>
+    <div class="div2"> 
+    <h3>width property outline</h3>
+    <p  id="thick">thick border width</p>
+    <p  id="medium"> medium border width.</p>
+    <p  id="thin">thin border width.</p>
+    <p  id="numeric">numeric border width</p></div>
+    <h3>outline offset</h3>
+    <p class="offset1">lakukan atau jangan lakukan kamu akan menyesali keduanya</p>
+</body>
+</html>

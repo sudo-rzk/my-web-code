@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alignment</title>
+    <style>
+ /*text-align:untuk mengatur posisi horizontal dari teks di dalam sebuah elemen
+         left: Meratakan teks ke sisi kiri.
+right: Meratakan teks ke sisi kanan.
+center: Meratakan teks ke tengah.
+justify:setiap baris akan diregangkan sehingga setiap baris memiliki lebar yang sama
+inherit; Mewarisi nilai dari elemen body 
+start dan end digunakan untuk meratakan teks ke sisi awal atau akhir dari sebuah baris*/
+h4{text-align: center;}
+h2{text-align: left;}
+h5{text-align: right;}
+#justify{text-align: justify;}
+div{
+    border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+main{
+    border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 140px;
+  /* Dalam bahasa yang ditulis dari kiri ke kanan, start akan sama dengan left. Namun,
+   dalam bahasa yang ditulis dari kanan ke kiri, start akan menjadi sisi kanan. */
+  text-align:start;
+}
+/*txt align last:mengatur posisi perataan baris terakhir dari sebuah paragraf atau blok teks
+left: Meratakan baris terakhir ke sisi kiri.
+right: Meratakan baris terakhir ke sisi kanan.
+center: Meratakan baris terakhir ke tengah.
+justify: Menjustifikasi baris terakhir (mirip dengan text-align: justify, tetapi hanya untuk baris terakhir).*/
+p.a{
+  border: 1px solid black;
+  padding: 10px;
+  width: 300px;
+    height: 140px;
+  text-align-last: right;}
+  .b{border: 4em solid rgba(196, 203, 255, 0.824);
+     padding: 4%;
+     height: 160px;
+     width: 540px;
+  }
+/*text-direction digunakan untuk menentukan arah penulisan teks dalam suatu elemen. 
+Ini sangat penting, terutama saat kita berurusan dengan bahasa yang ditulis dari kanan ke kiri seperti Arab atau Ibrani
+ Nilai: ltr (left-to-right) atau rtl (right-to-left).
+Fungsi: Menentukan apakah teks dalam posisi dari kiri ke kanan atau sebaliknya */
+  #p1{direction: rtl;
+/* unicode-bidi: bekerja sama dengan text-direction untuk menangani teks yang mengandung campuran 
+                arah penulisan (bidirectional text). 
+Nilai: normal, embed, bidi-override
+Fungsi: Mengontrol bagaimana browser menangani pencampuran arah penulisan dalam teks.*/
+      unicode-bidi: bidi-override;
+  }
+  /* vertical-align digunakan untuk mengatur posisi vertikal dari sebuah elemen inline (seperti gambar, input, atau teks) di dalam garis baseline.
+
+Nilai: baseline, top, middle, bottom, sub, super, dan nilai numerik. */
+/* Fungsi: Menentukan seberapa tinggi atau rendah sebuah elemen inline dibandingkan dengan teks di sekitarnya. */
+  img{
+    height: auto;
+    vertical-align: middle;
+  }
+  /* text-direction: Sering digunakan saat membuat situs web mentata penulisan bahasa yang ditujukan untuk audiens internasional.
+vertical-align: Sangat sering digunakan dalam tata letak yang melibatkan gambar dan teks, seperti dalam pembuatan tabel atau formulir.
+unicode-bidi: Kurang sering digunakan secara langsung, tetapi sangat penting untuk memahami konsepnya saat berurusan dengan teks bidirectional. */
+    </style>
+</head>
+<body>
+   <h3>text align</h3>
+   <h4>center</h4>
+   <h2>left</h2>
+   <h5>right</h5>
+   <p id="justify">justify</p>
+   <p>end</p>
+   <div>
+    In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
+   </div>
+   <br>
+   <main> ضعفًا، أعطاني والدي بعض النصائح التي ظللت أقلبها في ذهني منذ ذلك الحين. قال لي: "كلما شعرت برغبة في انتقاد أي شخص، تذكر فقط أن جميع الأشخاص في هذا العالم لم يتمتعوا بالمزايا التي كانت لديك</main>
+   <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatibus natus commodi iusto. Facere laboriosam animi atque corporis est culpa tempore nisi laudantium. Minima, delectus! Doloribus neque natus esse molestiae?</p>
+   <div class="b">
+    <p id="p1">Lorem ipsum dolor sit astias.</p>
+    <p>This is English text. <span dir="rtl">هذا نص عربي.</span></p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quod, saepe illo quam vero quo voluptatem quos accusantium. Unde accusamus maiores aliquam quia modi repellendus quam dolor rerum illo voluptatum!</p>
+   </div>
+   <img src="3Dsimple.jpeg" alt="geometri">
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model</title>
+    <style>
+/* box model adalah konsep  yang menggambarkan setiap elemen HTML sebagai sebuah kotak. 
+   Kotak ini terdiri dari beberapa area, yaitu: Content,Paddin,Border,Margin 
+
+ 🔍 Apa Itu box-sizing?
+box-sizing menentukan bagaimana total lebar dan tinggi elemen dihitung ketika ada padding dan border
+  border-box = Padding & border masuk dalam total ukuran elemen Ukuran tetap seperti yang ditulis
+    w + p = 200 - 20 - 40 = 140px
+*/
+  
+      .box1{
+        width: 200px;
+        height: 150px;
+        padding: 20px;
+        border: 2px solid black;
+        margin: 10px;
+/* menghasilkan sebuah kotak dengan lebar 200px, tinggi 150px, padding 20px di semua sisi,
+ border 2px solid hitam, dan margin 10px di semua sisi. */
+      }  
+      .box2{
+        width: 200px;
+        height: 150px;
+        padding: 20px;
+        border: 2px solid blue;
+        /* box-sizing: border-box; */
+        margin: 10px;
+      }
+      /* all */
+      *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+    <h2>Without the CSS box-sizing Property</h2>
+    <div class="box1">
+        <blockquote>sekarang rasa  sakit dan penderitaan tak dapat dihindarkan</blockquote>
+    </div>
+    <h2>with the css box-sizing</h2>
+    <div class="box2">
+        <blockquote>sekarang rasa  sakit dan penderitaan tak dapat dihindarkan</blockquote>
+    </div>
+    
+</body>
+</html>

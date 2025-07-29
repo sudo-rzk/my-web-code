@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding</title>
+</head>
+<!--Padding dalam CSS adalah jarak atau ruang kosong yang berada di dalam antara konten elemen 
+    batas (border) atau tepi elemen tersebut.
+    Fungsi/kpn Padding:Memberi ruang pada konten, membantu mengatur tata letak elemen-elemen
+                       membuat hover kombinasi dgn class hover,membuat layout lbh kompleks
+    atribute padding:
+    height - menentukan bantalan dalam px, pt, cm, dll.
+     % - menentukan padding dalam % dari lebar elemen yang memuatnya
+    inherit - menentukan bahwa padding harus diwarisi dari elemen induk -->
+<style>
+       .container1{
+        border:2px solid red;
+        background-color: darkgreen;
+        /* Lebar total: semua akan dijumlahkan 
+        Padding adalah bagian dari elemen itu sendiri. Ketika kita menambahkan padding, 
+        kita sebenarnya memperbesar area yang ditempati oleh elemen tersebut. Oleh karena itu,
+         padding akan ikut diperhitungkan dalam perhitungan lebar total elemen. */
+        width: 200px;
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+       }
+</style>
+<body>
+    <div class="container1">
+        <p>sekarang tk perlu khawatir, semua tampak baik baik saja</p>
+        <p>sekarang apa yang  kamu lakukan hari ini untuk esok hari ,kenyataan esok hari tak terprediksi</p>
+    </div>
+    
+</body>
+</html>

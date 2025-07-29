@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font face local</title>
+    <style>
+        /* ketika browser menemukan deklarasi @font-face dgn local()
+        maka browser akan mencari font yang sudah ada di komputer user 
+         Jika font ditemukan, browser akan menggunakannya. Jika tidak,
+          browser akan mengunduh font dari URL yang Anda tentukan dalam url()*/
+
+          body{
+            font-family: 'Lato', sans-serif;
+          }
+          @font-face {
+            font-family: 'Lato';
+            src: local('sans-serif',Arial) /* cek ini dulu */
+                 url(font\ templete/Noto_Sans/Noto_SansJP) format('ttf')
+          }
+          h2{
+            font-family:' BarlowCondensed-Light';
+          }
+    </style>
+</head>
+<body>
+    <h2>something in the unknowhere</h2>
+</body>
+</html>

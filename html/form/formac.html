@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form action coyyy</title>
+</head>
+<body>
+<!-- action Attribute:menentukan url tujuan ketika formulir diklik
+ exmple: Formulir login yang selalu mengirimkan data ke halaman proses login yang sama. -->
+ <h1>action atirbut</h1>
+ <form action="https://www.youtube.com">
+    <label for="name">name</label>
+   <input type="text" value="name" placeholder="name">
+   <br>
+   <input type="submit" value="submit">   
+ </form>
+ <br>
+ <!-- formaction:lebih spesifik,setiap tombol ke tujuan berbeda beda
+exmple:Formulir survei yang memiliki beberapa tombol submit, masing-masing mengirimkan data 
+       ke halaman hasil yang berbeda-beda berdasarkan pilihan pengguna. -->
+  <form>
+    <label for="name">name</label>
+    <input type="text" value="name" placeholder="name">
+    <br>
+    <input type="submit" value="gugel" formaction="https://www.Google.com">
+    <input type="submit" value="spotify" formaction="https://www.spotify.com">
+  </form>
+  <br>
+<!-- enctype:menentukan bagaimana data formulir harus dikodekan saat dikirimkan
+            (hanya untuk formulir dengan method="post")
+    formenctype: berfungsi sama dengan tipe input berikut: kirim dan gambar
+application/x-www-form-urlencoded lebih efisien untuk formulir sederhana yang hanya mengirimkan data teks.
+multipart/form-data lebih fleksibel dan cocok untuk formulir yang melibatkan unggahan file atau data biner lainnya.-->
+<form action="input types.html" method="post" enctype="multipart/form-data">
+      <input type="text" name="name"><br><br>
+      <input type="submit" value="Upload">
+      <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+</form>
+<hr>
+<!--formmethod: mendefinisikan metode HTTP untuk mengirim data formulir ke URL tindakan
+    disini ada 2 tombol beda tindakan get dan post -->
+<form action="input types.html" method="post">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit using GET">
+  <input type="submit" formmethod="post" value="Submit using POST">
+</form>
+<hr>
+<!--formtarget:sama dgn target bedanya ini untuk atribut input  -->
+<form action="#">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+</form>
+
+
+
+
+</body>
+</html>

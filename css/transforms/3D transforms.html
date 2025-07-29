@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D transforms</title>
+    <style>
+    /*Transformasi 3D:untuk memanipulasi elemen HTML dalam ruang tiga dimensi (sumbu X, Y, dan Z)
+     perspective menentukan seberapa jauh atau dekat objek 3D terlihat dari mata pengguna.
+        Nilai yang lebih kecil akan memberikan efek perspektif yang lebih kuat, membuat objek terlihat lebih dekat dan lebih terdistorsi.
+        Nilai yang lebih besar akan memberikan efek perspektif yang lebih lemah, membuat objek terlihat lebih jauh dan kurang terdistorsi. */
+        .div1{
+            width: 200px;
+            height: 100px;
+            background-color: dodgerblue;
+            border: 1px solid black;
+        }
+        .div1:hover{
+            transform: translate3d(50px, 20px, 10px)
+        }
+
+        .div2{
+            perspective: 120px;
+        }
+        span{
+            width: 200px;
+            height: 100px;
+            background-color: dodgerblue;
+            border: 1px solid black;
+        }
+        /* Jarak pergeseran pada sumbu Z (mendekati atau menjauhi pengguna) */
+        span:hover{
+            transform: translateZ(100px)
+        }
+
+        .div3{
+            width: 200px;
+            height: 100px;
+            background-color: dodgerblue;
+            border: 1px solid black;
+        }
+        .div3:hover{
+            transform: rotate3d(1, 1, 0, 45deg)
+        }
+
+        .div4{
+            perspective: 500px;
+        }
+        p{
+            width: 200px;
+            height: 100px;
+            background-color: dodgerblue;
+            border: 1px solid black;
+        }
+        p:hover{
+            transform:rotateZ(20deg);
+        }
+
+
+        .div5{
+            width: 200px;
+            height: 100px;
+            background-color: dodgerblue;
+            border: 1px solid black;
+        }
+        .div5:hover{
+            /* scale3d(x, y, z)
+                x: Faktor penskalaan pada sumbu X (horizontal).
+                y: Faktor penskalaan pada sumbu Y (vertikal).
+                z: Faktor penskalaan pada sumbu Z (mendekati atau menjauhi pengguna)
+            perkecil x:0.2 perbesar Y:2 diperbesarz:4 */
+            transform: scale3d(0.4,2,4);}
+
+        .div7{
+            perspective: 500px;
+        }    
+        #p1{
+            width: 200px;
+            height: 100px;
+            background-color: dodgerblue;
+            border: 1px solid black;
+            transform: scaleZ(4)
+        }
+
+
+        .box1{
+           border: 4px solid;
+           width: 250px;
+           height: 250px;
+           font-size: 225px;
+           text-align: center;
+           background:lightskyblue;
+           float: left;
+        
+        }
+
+        .box1:hover{
+         /* transform: translateX(50px);
+         transform: translateY(50px);
+         transform: translate(20px, 50px);
+         transform: rotateX(180deg);
+         transform: rotateY(180deg);
+         transform: rotateZ(180deg);
+         transform: scaleX(3);
+         transform: scaleY(3);
+         transform: scale(2, 2);
+         transform: skewX(45deg);
+         transform: skewY(45deg); */
+         transform: skew(20deg, 20deg);
+         background-color: red;
+ 
+        }
+        .box2{
+           border: 4px solid;
+           width: 340px;
+           height: 250px;
+           font-size: 225px;
+           text-align: center;
+           background:lightskyblue;
+           float: left;
+        
+        }
+
+        .box2:hover{
+         /* transform: translateX(50px);
+         transform: translateY(50px);
+         transform: translate(20px, 50px);
+         transform: rotateX(180deg);
+         transform: rotateY(180deg);
+         transform: rotateZ(180deg);
+         transform: scaleX(3);
+         transform: scaleY(3);
+         transform: scale(2, 2);
+         transform: skewX(45deg);
+         transform: skewY(45deg); */
+         transform: skew(-20deg,-20deg);
+         background-color: blue;
+         
+ 
+        }
+
+        .box3{
+           border: 4px solid;
+           width: 470px;
+           height: 250px;
+           float: left;
+           font-size: 225px;
+           text-align: center;
+           background:lightskyblue;}
+
+        .box3:hover{
+         /* transform: translateX(50px);
+         transform: translateY(50px);
+         transform: translate(20px, 50px);
+         transform: rotateX(180deg);
+         transform: rotateY(180deg);
+         transform: rotateZ(180deg);
+         transform: scaleX(3);
+         transform: scaleY(3);
+         transform: scale(2, 2);
+         transform: skewX(45deg);
+         transform: skewY(45deg); */
+         transform: skew(20deg, 20deg);
+         background-color: green;
+
+ 
+        }
+    </style>
+</head>
+<body>
+    <h2>3d translate</h2>
+    <div class="div1">translate 3d x,y,z</div>
+    <h2>3d translate z</h2>
+    <div class="div2"><span>translate Z</span></div>
+    <h2>3d rotate </h2>
+    <div class="div3">rotate 3d x,y,z</div>
+    <h2>3d rotate z</h2>
+    <div class="div4"><p>rotate Z</p></div>
+    <h2>3d scale</h2>
+    <div class="div5">scale 3d x,y,z</div>
+    <h2>3d scale z</h2>
+    <div class="div7"><p id="p1">scale Z</p></div>
+    <h2>bro code transform 4 min</h2>
+    <div class="box1">HI</div>
+    <div class="box2">Bro</div>
+    <div class="box3">Code</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button css</title>
+    <style>
+        .btn{
+            background-color: red;
+            padding: 15px 36px;
+            text-align: center;
+            margin-left: 15px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-size: large;
+            color: antiquewhite;
+        }
+        /* hover */
+        #b1:hover{
+            background-color: aliceblue;
+            color: black;
+            border: 1px solid green;
+            
+            
+        }
+        #b1:active{
+            background-color: #3e8e41;
+            
+        }
+        /* border animation button */
+        #b2:hover{
+            background-color:azure;
+            animation: animasibtn 5s infinite;
+            border: 1px solid black;
+            color: black;
+            border: 2px solid black;
+            transition: 1s;
+           
+        }
+        @keyframes animasibtn{
+            0%{border:2px solid green ;font-size: medium;font-family: Arial; ;}
+            20%{border:2px solid blue;font-size: small;font-family: lucida; filter: blur(1)}
+            50%{border-radius: 20%;border:2px solid rgba(255, 13, 0, 0.835);font-family: Cambria, Cochin, Georgia, Times; filter: blur(1)}
+            100%{border:2px solid rgb(red, green, blue);font-family: 'Franklin Gothic Medium', 'Arial Narrow'; filter: blur(1)}
+        }
+         /* button group float & block  */
+         .btn-group1 .button{
+            background-color: green;
+            color: aliceblue;
+            text-align: center;
+            display: inline-block;
+            float: left;
+            cursor: pointer;
+            padding: 15px 32px;
+      
+           
+
+         }
+         .btn-group1 .button:hover{
+            background-color: #3e8e41;
+            transition: ease-out;
+
+         }
+         .btn-group2 .button{
+            background-color: green;
+            color: aliceblue;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+            padding: 15px 32px;
+
+         }
+         .btn-group2 .button:hover{
+            background-color: #3e8e41;
+            transition: ease-out;
+
+         }
+        .clear{
+            clear: both;
+        }
+        /* arrow button */
+        .btn-arrow{
+            border-radius: 4px;
+            background-color: orangered;
+            color: aliceblue;
+            padding: 12px 32px;
+            position: relative;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        
+    
+        .btn-arrow:hover{
+            /* content property are anonymous replaced element */
+            content: '>>';
+            transition: 0.5 ease;
+            
+        }
+        .btn-arrow:active{
+            background-color: #3e8e41;}
+        
+
+
+        .press{
+            display: block;
+            padding: 15px 25px;
+            cursor: pointer;
+            text-align: center;
+            color: antiquewhite;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }    
+        .press:hover{background-color: rgba(0, 0, 0, 0.225);}
+        .press:active{
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Buttons</h2>
+    <button class="btn">click me!</button>
+    <button class="btn" style="background-color: blue; cursor:move;">click move</button>
+    <button class="btn" style="background-color: blueviolet; cursor: alias;">or me</button>
+    <button class="btn" style="background-color: crimson; cursor:crosshair;">and me</button>
+    <button class="btn" style="background-color: darkslategrey; cursor: not-allowed;">not me</button>
+    <h2>Buttons hover</h2>
+    <button class="btn" id="b1" style="transition: 1s ease-out; ">hover mee!!</button>
+    <button class="btn" id="b2" style="transition: 1s;">hover mee!!</button>
+    <h2>btn group</h2>
+    <div class="btn-group1">
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+        <div class="clear"></div> 
+      </div>
+    <h2>btn group</h2>
+    <div class="btn-group2">
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+        <button class="button">Button</button>
+    </div>
+    
+    <h2>arrow button</h2>
+    <button class="btn-arrow">hover me &gt;&gt;</button>
+    <h2>pressed effect</h2>
+    <button class="press">press me!!</button>
+</body>
+</html>

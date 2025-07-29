@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object fit </title>
+    <style>
+    /* 
+    object fit = membuat ukuran konten fit dengan cut elemen berdasarkan 
+                  bentuk geometris supaya muat di container
+    nilai object fit:
+    1.fill(default) = Konten akan diregangkan atau diciutkan agar sepenuhnya mengisi area container
+    2.contain = diubah ukurannya agar seluruh konten muat di dalam area container,
+                 sambil mempertahankan rasio aspeknya
+    3.cover = diubah ukurannya agar menutupi area container, sambil mempertahankan rasio aspeknya.
+     Jika rasio aspek konten dan area konten berbeda, konten akan dipotong agar sesuai   
+    4.none = Konten tidak akan diubah ukurannya dan akan ditampilkan dengan ukuran aslinya
+    5.scale-down = jika ukuran besar  diubah agar muat dlm area konten
+                   jika kecil   tampilan ukuran asli 
+                   
+                   
+    Kapan Menggunakan object-fit?
+    - membuat gallery
+    - video background
+    - avatar & foto profil
+    - responsif : mengatur ukuran konten dengan berbagai ukuran layar            
+         */
+
+         .container1{
+            width: 300px;
+            height: 400px;
+            
+         }
+          #foto1{
+            object-fit: fill;
+            width: 300px;
+            height: 400px;
+         }
+
+         #foto2{
+            object-fit: contain;
+            width: 300px;
+            height: 400px;
+         }
+         #foto3{
+            object-fit: cover;
+            width: 300px;
+            height: 400px;
+         }
+         #foto4{
+            /* jika container kecil akan di pas sampai cut konten */
+            object-fit: none;
+            width: 300px;
+            height: 400px;
+         }
+         #foto5{
+            object-fit: scale-down;
+            width: 300px;
+            height: 400px;
+         }
+        
+
+
+         .container-beda{
+            width: 100%;
+            height: 400px;
+         }
+         /* tanpa object fit */
+         #foto6{
+            width: 50%;
+            height: 100%;
+            max-width: 100%;
+            float: left;
+         }
+         #foto7{
+            width: 50%;
+            height: 100%;
+            max-width: 100%;
+            float: left;
+         }
+        /* perilaku cover akan menutupi konten 
+          contain menyesuaikan akan menciut  */
+        #foto8{
+            object-fit: cover;
+            width: 50%;
+            height: 100%;
+            max-width: 100%;
+            float: left;
+        } 
+        #foto9{
+            object-fit: contain;
+            width: 50%;
+            height: 100%;
+            float: left;
+            max-width: 100%;
+
+        }
+
+        /* object-position = menentukan posisi konten dari object-fit
+          nilai object-position:
+          1.kata kunci: top,bottom,left,right,center bisa keduanya 
+          2.percent % = 0% = sudut kiri atas ,100% = kanan bawah,50% = center
+          3. px,em dll
+          syntax: 
+            object-position: <horizontal> <vertical>;
+        
+        */
+
+        #foto10{
+            object-fit: cover;
+            /* object-position: bottom ; */
+            width: 100%;
+            height: 100%;
+        }
+        .container1 #foto10{
+            object-position: left center;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h2>fill</h2>
+    <div class="containe1">
+        <img src="trii3.jpg" alt="tri3" id="foto1">
+    </div>
+    <h2>contain</h2>
+    <div class="container">
+        <img src="trii3.jpg" alt="tri3" id="foto2">
+    </div>
+    <h2>cover</h2>
+    <div class="container">
+        <img src="trii3.jpg" alt="tri3"  id="foto3">
+    </div>
+    <h2>none</h2>
+    <div class="container">
+        <img src="trii4.jpg" alt="tri4" id="foto4">
+    </div>
+    <h2>scale down</h2>
+    <div class="container">
+        <img src="trii4.jpg" alt="tri4" id="foto5">
+    </div>
+    <h2>2 image 1 container</h2>
+    <div class="container-beda">
+        <img src="trii3.jpg" alt="tri3" id="foto6">
+        <img src="trii4.jpg" alt="tri4" id="foto7">
+        <br>
+        <img src="trii.jpg" alt="trii" id="foto8">
+        <img src="trii3.jpg" alt="trii3" id="foto9">
+    </div>
+    <h2>object-position</h2>
+    <div class="container">
+        <img src="trii3.jpg" alt="tri3" id="foto10">
+    </div>
+</body>
+</html>

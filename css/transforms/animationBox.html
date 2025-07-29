@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Box</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border: 1px solid black;
+        }
+        .box1{
+        width: 50px;
+        height: 50px;
+        background-color: blueviolet;
+        /* absolute; memungkinkan kita mengatur posisi elemen .kotak menggunakan left, right, top,bottom */
+        position: absolute;
+        animation-name: box;
+        animation-duration:5s ;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+    }
+    @keyframes box{
+        /* Animasi ini membuat kotak bergerak mengelilingi wadah dalam pola persegi. */
+        /* kebawah */
+        0%{background-color: antiquewhite;left: 0px;top: 0px;} 
+        /* kekanan */
+        25%{background-color: aquamarine;left:250px;top:0px;} 
+        /* keatas */
+        50%{background-color: blueviolet;left:250px;top:250px;}
+        /* kekiri */
+        75%{background-color: aquamarine;left:0px;top:250px;}
+        /* kembali ke awal */
+        100%{background-color: antiquewhite;left:0px;top:0px;}
+    }
+    /* banyak kekurangan:terlalu berat,tidak sefleksibel transform untuk animasi kompleks */
+    /* alternatif pake transform 
+    Mengapa transform: translate() Lebih Baik?
+
+Kinerja: transform: translate() dioptimalkan oleh browser untuk animasi, sehingga memberikan kinerja yang lebih baik.
+Hardware Acceleration: Transformasi sering kali menggunakan akselerasi perangkat keras, yang membuat animasi lebih halus*/
+    .container1{
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            border: 1px solid black;
+        }
+        .box2{
+        width: 50px;
+        height: 50px;
+        background-color:navy;
+        /* absolute; memungkinkan kita mengatur posisi elemen .kotak menggunakan left, right, top,bottom */
+        position: absolute;
+        animation-name: box-transform;
+        animation-duration:5s ;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        }
+        @keyframes box-transform{
+            /* kebawah */
+            0%{transform: translate(0,0);}
+            /* kekanan */
+            25%{transform: translate(250px,0);}
+            /* keatas */
+            50%{transform: translate(250px,250px);}
+            /* kekiri */
+            75%{transform: translate(0,250px);}
+            /* balik  */
+            100%{transform: translate(0,0);}
+        }
+
+        .curve {
+            width: 100px;
+            height: 50px;
+            line-height: 1.6;
+            background-color: red;
+            font-weight: bold;
+            position: relative;
+            animation: mymove 5s;
+            animation-fill-mode: forwards;
+}
+
+#liner {animation-timing-function: linear;}
+#ease {animation-timing-function: ease;}
+#ease-in {animation-timing-function: ease-in;}
+#ease-out {animation-timing-function: ease-out;}
+#ease-in-out {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box1"></div>
+    </div>
+    <br>
+    <hr>
+    <div class="container2">   
+    <div class="box2"></div>
+    </div>
+    <div class="curve">
+        <div id="liner"></div>
+        <div id="ease"></div>
+        <div id="ease-in"></div>
+        <div id="ease-out"></div>
+        <div id="ease-in-out"></div>
+        <div id="cubic-bazier"></div>
+    </div>
+</body>
+</html>

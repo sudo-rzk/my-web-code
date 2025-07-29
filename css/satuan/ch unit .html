@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch unit css</title>
+    <style>
+        .column{
+    /*selebar 40 kali lebar karakter 0. Jika ukuran font diperbesar, lebar container juga akan ikut membesar.  */
+            width:60ch;
+            border: 2px solid red;
+        }
+        .text{
+            /* jarak antar elemen */
+            margin-left: 2ch;
+            padding: 1ch;
+        }
+        .column2{
+            width: 50ch;
+            border: 1ch solid blue;
+
+        }
+        .txt{
+            /* font menyesuaikan 4% dari ukuran column2 */
+            font-size: min(4vw, 2ch);
+        }
+        .column3{
+            width: 50vw;
+            border: 2px solid green;
+        }
+        .txt2{
+            padding: 2ch;
+            margin: 1vw;
+        }
+    </style>
+</head>
+<body>
+<!-- Unit ch dalam CSS adalah satuan ukuran yang relatif terhadap lebar karakter angka 0 (nol) 
+         pada font yang sedang digunakan
+         
+Kapan Menggunakan ch?
+
+Ketika ingin membuat ukuran elemen yang terkait langsung dengan lebar karakter.
+Ketika ingin membuat desain yang responsif dan skalabel.
+Ketika ingin menjaga jarak antara karakter dan kata yang konsisten.
+
+Hal yang perlu diingat:
+
+Lebar karakter berbeda-beda: Huruf O, A, W, atau karakter spesial seperti titik koma memiliki lebar yang berbeda-beda.
+Font: Jenis font juga mempengaruhi lebar karakter. Font serif (seperti Times New Roman) biasanya memiliki lebar karakter yang sedikit berbeda dengan font sans-serif (seperti Arial).
+Spasi: Spasi antara kata juga memiliki lebar tertentu yang ikut dihitung dalam satuan ch.-->
+<div class="column">
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod</p>
+</div>
+<div class="column2">    
+    <p class="txt">biarkan kita mendorong batu tanpa akhir seperti sisifus,</p>
+</div>
+<div class="column3">    
+    <p class="txt2">lorem tanpa Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magni nulla possimus nisi corporis consequuntur explicabo est culpa non alias optio pariatur nobis illo fugiat ea, excepturi eaque doloribus minus!</p>
+</div>
+</body>
+</html>

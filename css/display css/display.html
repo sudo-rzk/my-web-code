@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display css</title>
+    <style>
+/*display: untuk mengatur bagaimana sebuah elemen HTML ditampilkan pada halaman web*/        
+    .li1{
+        /* block:
+Elemen akan menempati seluruh lebar yang tersedia pada wadah induknya.
+Memulai pada baris baru.
+Contoh elemen yang secara default memiliki nilai display: block adalah <div>, <h1>, <p>, <ul>, dan <li>. */
+        display: block;
+        text-decoration: none;
+    }
+    .li2{
+/* inline:
+Elemen hanya akan menempati ruang yang dibutuhkan oleh kontennya.
+Tidak memulai pada baris baru.
+ Contoh elemen yang secara default memiliki nilai display: inline adalah <span>, <a>, <img>. */
+        display: inline;
+        text-decoration: none;
+    }  
+    .li3{
+    /* inline-block:Kombinasi dari inline dan block. 
+    Elemen akan berperilaku seperti elemen inline (tidak memulai baris baru), tetapi bisa diberikan lebar dan tinggi secara eksplisit.*/
+        display: inline-block;
+    }
+    .li4{
+/*none: Elemen tidak akan ditampilkan sama sekali. Efeknya sama dengan menggunakan visibility: hidden,
+ tetapi elemen dengan display: none tidak akan memakan ruang pada layout. */
+        display: none;
+    }
+/*visibility:hidden;juga menyembunyikan suatu elemen.
+Namun, elemen tersebut akan tetap menempati ruang yang sama seperti sebelumnya.
+ Elemen tersebut akan disembunyikan, tetapi tetap memengaruhi tata letak  */
+    .hidden{
+        visibility: hidden;
+    }
+.container {
+/*flow-root:digunakan untuk membuat sebuah elemen menjadi kontainer pembentuk blok (block-forming container) baru.  */
+  display: flow-root;
+  background-color: lightblue;
+}
+
+.box1 {
+  float: left;
+  width: 30%;
+}
+
+.box2 {
+  float: right;
+  width: 30%;
+}  
+
+    </style>
+</head>
+<body>
+
+    <h2>display block</h2>
+    <ol>
+        <li class="li1"><a href="https://www.google.com">google</a></li>
+        <li class="li1"><a href="https://www.facebook.com">facebook</a></li>
+        <li class="li1"><a href="https://www.ibm.com">ibm</a></li>
+    </ol>
+    <h2>display inline</h2>
+    <ol>
+        <li class="li2"><a href="https://www.google.com">google</a></li>
+        <li class="li2"><a href="https://www.facebook.com">facebook</a></li>
+        <li class="li2"><a href="https://www.ibm.com">ibm</a></li>
+    </ol>
+    <h2>display inline block</h2>
+    <ol>
+        <li class="li3"><a href="https://www.wikipedia.com">wikipedia</a></li>
+        <li class="li3"><a href="https://www.tiktok.com">tik tok</a></li>
+        <li class="li3"><a href="https://www.microsoft.com">microsoft</a></li>
+    </ol>
+    <h2>display none</h2>
+    <ol>
+        <li class="li4"><a href="https://www.spotify.com">spotify</a></li>
+        <li class="li4"><a href="https://www.redmi.com">redmi</a></li>
+        <li class="li4"><a href="https://www.lenovo.com">lenovo</a></li>
+    </ol>
+    <h1>This is a visible heading</h1>
+<h1 class="hidden">This is a hidden heading</h1>
+<p>Notice that the hidden heading still takes up space.</p>
+<br>
+<div class="container">
+    <div class="box1">Kotak 1</div>
+    <div class="box2">Kotak 2</div>
+    <div class="box3">Kotak 3</div>
+  </div>
+
+</body>
+</html>

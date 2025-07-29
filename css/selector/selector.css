@@ -1,0 +1,72 @@
+/* Selektor: Menentukan elemen HTML mana yang akan diberi gaya
+
+
+
+
+
+
+universal selector = apply semua komponen */
+*{
+    font-family:Arial;
+    text-align: center;
+    
+}
+/* Pemilih/selector elemen: memilih elemen HTML berdasarkan nama elemen
+semua elemen p bakal center */
+
+p{
+    text-align: center;
+}
+#company{
+    color: cornflowerblue;    
+}
+
+/* class selector:memilih elemen dengan kelas tertentu,tulis titik (.)*/
+.network{
+     text-align:left;
+}
+/* menentukan hanya elemen HTML tertentu yang akan dipengaruhi oleh suatu kelas */
+li.network{
+    color: gold;    
+}
+/* id selector:pemilih id digunakan untuk memilih satu elemen unik tanda # */
+
+#judul1{
+    text-align: center;
+    color:crimson;
+}
+
+
+/* universal selector = apply semua komponen */
+*{
+    font-family:Arial;
+    text-align: center;
+    
+}
+/* Grouping Selector:mengelompokkan pemilih, pisahkan setiap pemilih dengan koma. */
+h1,#judul2,#p3{
+    text-align: center;
+    background-color: darkblue;
+}
+/* CSS COMBINATOR */
+/* child selctor */
+/* mencari element inline */
+p>b{
+    color: chartreuse;
+}
+/* decendant selector 
+ apapun inline ada inline*/
+p b{
+    color:darkcyan;
+}
+/* adjacent sibling selector = semua elemen<p>dibawah langsung ul akan style*/
+body+h1{
+    color:darkslategrey;        
+}
+/* General Sibling selector = semua <h2> yg berada setelah<h1> color red */
+h1~h2{
+    color: red;
+}
+a{
+    color:red;
+}

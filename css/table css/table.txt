@@ -1,0 +1,38 @@
+table tr:hover {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #007bff;
+}
+
+table tr td:nth-child(odd) {
+  border-right: 1px solid #ddd;
+}
+
+table tr td:nth-child(even) {
+  border-right: 1px solid #ccc;
+}
+
+table th, td {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+table th, td {
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid transparent; /* Menyembunyikan border asli */
+  border-image: url('border.png') 1 repeat;
+}
+
+Tips:
+
+Gunakan border-collapse: collapse; untuk menghilangkan jarak antar batas sel.
+Kombinasikan dengan properti lainnya: Gunakan padding, margin, dan background-color untuk mengatur tampilan keseluruhan tabel.
+Sesuaikan dengan desain: Pilih gaya border yang sesuai dengan tema desain website Anda.
+Perhatikan performa: Penggunaan border yang berlebihan bisa mempengaruhi kinerja halaman.

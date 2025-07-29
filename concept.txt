@@ -1,0 +1,83 @@
+HTML Block and Inline Elements
+
+block Elements:untuk membangun struktur dan tata letak halaman
+               untuk memulai dan akhir konten dan dalam 
+               block Elements bisa berisi block dan Inline
+Elements:
+        <div>,<p>,<h1> hingga <h6>,<ul> dan <ol>,<li>,<blockquote>,
+        <section>, <article>, <header>, <footer><address>
+        <article><aside><blockquote><canvas><dd><dl><dt><fieldset>
+        <figcaption><figure><footer><form>:<main>
+        <nav><noscript><ol><p><pre><section><table><tfoot><ul><video> 
+
+Inline Elements:untuk isi konten block Elements yang lebih kecil
+                dapat berisi inline tapi tidak bisa block
+                ditempatkan satu pada block Elements
+Elements:
+         <span>,<a>,<strong>,<em>,<img>,<br>,<input>, <label>:
+         <a><abbr><acronym><b><bdo><big><br><button><cite><code>
+         <dfn><em><i><img><input><kbd><label><map><object><output>
+         <q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var> 
+
+atribute:
+        informasi tambahan yang diberikan pada sebuah elemen HTML untuk memberikan konteks 
+        atau memodifikasi tampilan atau perilaku elemen tersebut terletak di tag pembuka
+        <img src=  alt= > <p style= ></p>
+
+
+
+
+
+
+
+container:merujuk pada Elements yang membungkus elemen lain
+         untuk mengelompokkan konten, mengatur tata letak, dan menerapkan gaya yang konsisten
+         jika Anda memiliki sebuah bagian di halaman yang terdiri dari judul, paragraf, dan gambar, 
+         Anda mungkin akan membungkusnya dengan sebuah container 
+
+class atribute:atribut yang diberikan pada sebuah elemen HTML untuk tujuan styling atau pemrograman
+             Bayangkan kelas seperti label atau tag yang Anda tempelkan pada suatu benda. 
+syntax class:<p class="nama"> bisa 2 <p class="nama style"
+css : satu:.nama{}  2nama:.nama{} .style{}
+js : document.getElementsByClassName("city");
+
+id atribute:atribut unik yang diberikan kepada sebuah elemen HTML,id tidak boleh sama dlm 1 hal html.
+         Bayangkan ID seperti nomor identitas atau nama panggilan yang hanya dimiliki oleh satu orang.
+        Dengan ID, Anda bisa merujuk secara spesifik ke satu elemen tertentu di dalam halaman HTML Anda.
+        bisa membuat link internal=mengarah ke content yang 1 hal html id 
+syntax id:<p id="nama"> css:#nama{} js: document.getElementById("nama") 
+
+
+Elemen </meta>:elemen HTML yang memberikan informasi tambahan tentang halaman web kepada browser,
+               mesin pencari, dan perangkat lainnya. Informasi ini tidak langsung terlihat oleh pengguna, namun sangat penting untuk optimasi mesin pencari (SEO) 
+atribut </meta>:
+               charset="UTF-8": Menentukan encoding karakter sebagai UTF-8
+                  ASCII: Encoding yang hanya mendukung karakter bahasa Inggris dan beberapa simbol.
+                  ISO-8859-1: Encoding yang mendukung karakter bahasa Eropa Barat.
+                  Shift JIS: Encoding yang digunakan untuk bahasa Jepang.
+                  GB2312: Encoding yang digunakan untuk bahasa Mandarin.
+               viewport: Mengatur tampilan halaman web pada berbagai ukuran layar.
+               description: Menentukan deskripsi meta untuk SEO
+               keywords: Menentukan kata kunci meta untuk SEO
+                <meta name="author" content="John Doe">
+
+Elements yang sering digunakan html:
+    .<!doctype.html> .<head> .<h1-6> .<meta>
+    .<html>          .<title> .<body> .<nav>
+    .<main>          .<footer> .<section> .<article>
+    .<button>  
+
+
+
+
+LAYOUT/TATA LETAK HTML:
+ Elements:<header>- Menentukan header untuk dokumen atau bagian
+          <nav>- Menentukan sekumpulan tautan navigasi
+          <section>- Menentukan bagian dalam dokumen
+          <article>- Mendefinisikan konten yang independen dan mandiri
+          <aside>- Mendefinisikan konten selain konten (seperti sidebar)
+          <footer>- Menentukan footer untuk dokumen atau bagian
+          <details>- Menentukan detail tambahan yang dapat dibuka dan ditutup oleh pengguna sesuai permintaan
+          <summary>- Menentukan judul untuk <details>elemen  
+
+ SEMANTIC:                  

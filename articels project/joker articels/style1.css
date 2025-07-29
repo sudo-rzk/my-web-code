@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.header{
+   background-color: azure;
+   padding: 30px;
+   text-align: center;
+   font-size: large;
+}
+
+.column{
+    float: left;
+    width: 33.33%;
+    padding: 10px;  
+    height: 700px;
+}
+/* clear after float */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* footer */
+footer{
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+/* responsive */
+@media(max-width:600px){
+    .column{
+        /* penuhi layar ketika 600px */
+        width: 100%;
+    }
+}

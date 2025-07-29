@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow advanced</title>
+    <style>
+        /* box-shadow: Digunakan untuk menambahkan bayangan pada elemen 
+        syntax:
+       box-shadow: offset-x offset-y blur-radius spread-radius color;
+
+    offset-x: Jarak bayangan dari tepi kiri elemen (nilai positif ke kanan, negatif ke kiri).
+    offset-y: Jarak bayangan dari tepi atas elemen (nilai positif ke bawah, negatif ke atas).
+    blur-radius: Seberapa kabur bayangannya.
+    spread-radius: Seberapa besar bayangan mengembang keluar dari elemen. */
+        .box1{
+            height: 100px;
+            width: 300px;
+            padding: 30px;
+            padding-bottom: 20px;
+            font-size: larger;
+            background-color: blanchedalmond;
+            box-shadow: 10px 10px;
+        }
+        .box2{
+            height: 100px;
+            width: 300px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-size: larger;
+            background-color: azure;
+            box-shadow: 10px 5px 5px red;
+        }
+        .box3{
+            height: 100px;
+            width: 300px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-size: larger;
+            background-color: chartreuse;
+            /* spread:(postive)membesar, (negative)mengecil */
+            box-shadow: 10px 10px 5px 12px lightgreen;
+        }
+        .box4{
+            height: 100px;
+            width: 300px;
+            padding-top: 30px;
+            padding-left: 24px;
+            font-size: larger;
+            box-shadow: 10px 10px 5px 12px lightgreen inset;
+        }
+        .box5{
+            height: 100px;
+            width: 300px;
+            padding-top: 30px;
+            padding-left: 24px;
+            font-size: large;
+            box-shadow: 5px 5px red,10px 5px blue,15px 15px green;
+        }
+        .box6{
+            height: 100px;
+            width: 300px;
+            padding-top: 20px;
+            padding-left: 24px;
+            font-size: larger;
+            box-shadow: 5px 5px 8px red,10px 10px 8px blue,15px 15px 8px green inset;
+        }
+        div.txtcard {
+        width: 250px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        }
+
+        div.backdrop {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        font-size: 40px;
+        }
+
+        div.description {
+        padding: 10px;
+        }
+
+        div.polaroid{
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),0 6px 20px 0 rgba(0,0,0,0.24);
+            text-align: center;
+        }
+        div.text{
+            padding: 10px;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">dimana letak kenyamanan itu? katakann</div>
+    <h2>blur effect</h2>
+    <div class="box2">pengkhianatan muncul karena ketakutan</div>
+    <h2>spread effect</h2>
+    <div class="box3">imajinasi manusia mampu menghancurkan semesta ini</div>
+    <h2>Set the inset Parameter</h2>
+    <div class="box4">keadilan,kata yang indah untuk menipu orang lemah</div>
+    <h2>multiple shadow</h2>
+    <div class="box5">pemenang akan dikenang ,yang kalah akan dilupakan</div>
+    <h2>multiple shadow blur or inset</h2>
+    <div class="box6">keadilan lenyap ditangan ke egoisan yang tiada akhir</div>
+    <h2>card number</h2>
+    <div class="txtcard">
+        <div class="backdrop">
+          <h2>XI TKJ 1</h2>
+        </div>
+      
+        <div class="description">
+          <i>the only choosen one</i>
+        </div>
+      </div>
+
+    <h2>card polaroid</h2>
+    <div class="polaroid">
+        <img src="polaroid.jpg" alt="polaroid" style="width:100%;">
+        <div class="text">
+            <p>this is polaroid</p>
+        </div>
+    </div>
+</body>
+</html>

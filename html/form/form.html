@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <!-- form = kolom dari input/digunakan utk mengumpulkan data dari user ke server-->
+        <h3> create Form</h3>
+        <from>
+            <!--  -->
+            nama depan : <input type="text"><br>
+            nama belakang : <input type="text"><br>
+            email : <input type="email" value="email"><br>
+            password : <input type="password"><br>
+
+            <h4>WNI : RADIO button </h4>
+            <!-- radio button =  opsi yang hanya bisa pilih satu -->
+            <input type="radio" name="wni" value="yes">yes
+            <br>
+            <input type="radio" name="wni" value="no">no
+            <br>
+            <h4>musik favorit: (CHECKBOX)</h4>
+            <!-- checkbox = opsi yang bisa pilih lebih dari satu -->
+            <input type="checkbox" name="musik" value="pop">pop
+            <br>
+            <input type="checkbox" name="musik" value="rock">rock
+            <br>
+            <input type="checkbox" name="musik" value="jazz">jazz
+            <br>
+            <h4>dropdown list</h4>
+            <!-- select/dropdown/option list = pilih salah satu dari beberapa opsi 
+             size :atribut untuk menentukan jumlah nilai yang terlihat
+             multiple:untuk mengizinkan pengguna memilih lebih dari satu nilai
+            -->
+            <label>dropdown normal</label><br>
+            <select name="dropdown">
+                <option value="tjkt-1">tjkt-1</option>
+                <option value="tjkt-2">tjkt-2</option>
+                <option value="tjkt-3">tjkt-3</option>
+            </select>
+            <br>
+            <label>pake size</label><br>
+            <select name="dropdown" size="3" multiple>
+                <option value="tjkt-1">tjkt-1</option>
+                <option value="tjkt-2">tjkt-2</option>
+                <option value="tjkt-3">tjkt-3</option>
+            </select>
+            <br>
+            <h4>upload file</h4>
+            <!-- file choose = pilih file -->
+            <input type="file" name="foto">
+            <br>
+            <input type="button" name="submit" value="Submit">
+        </from>
+        <br>
+     <!-- <textarea> mendefinisikan bidang input multi-baris (area teks)
+         rows:menentukan jumlah baris yang terlihat di area teks.
+         cols:menentukan lebar area teks yang terlihat --> 
+        <textarea name="message" rows="8" cols="10">
+         i'm vengenge i'm the night i'm batman
+        </textarea>
+        <hr>
+        <from>
+<!--<fieldset>digunakan untuk mengelompokkan data terkait dalam suatu formulir/membentuk kotak
+    <legend>mendefinisikan judul untuk <fieldset>  -->
+            <fieldset>
+                <legend>Personalia:</legend>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br><br>
+                <input type="submit" value="Submit">
+              </fieldset>
+        </from>
+        <br>
+        <from>
+<!-- <datalist>menentukan opsi yang telah ditetapkan sebelumnya untuk suatu <input>
+     Atribut list  <input>harus mengacu pada id atribut elemen <datalist>-->
+            <label for="monster">input option:</label><br>
+            <input list="monster" name="monster" placeholder="input monster">
+            <datalist id="monster">
+              <option value="netanyahu">
+              <option value="joe biden">
+              <option value="partai politik">  
+            </datalist>
+        </from>
+        <!-- action = url tujuan dimana data from akan dikirim -->
+        <!-- method = metode pengiriman data post/get  -->
+        <!-- target = menentukan dimana hasil dari form ditampilkan -->
+        <!-- enctype = tipe kode data digunakan saat kirim form -->
+        <!-- autocomplete = fitur on/off browser secara otomatis melengkapi nilai berdasarkan nilai yang telah dimasukkan pengguna sebelumnya 
+             novalidate = menentukan bahwa data formulir (input) tidak boleh divalidasi saat dikirimkan
+             formaction:menentukan url memproses input menggantikan action atribut <form>bisa jadi tombol submit kedua-->
+<!-- atribute umum form:
+         type = Menentukan jenis input yang akan digunakan
+         name: Memberikan nama pada elemen input ,untuk mengidentifikasi data yang dikirimkan dari form ketika form tersebut disubmit
+         value: Menentukan nilai awal atau default dari input.
+       placeholder: Menampilkan teks petunjuk di dalam input sebelum pengguna mengetikkan apa pun
+
+atribut advanced/kontrol input:
+        required: Membuat input menjadi wajib diisi. Jika tidak diisi, form tidak akan dapat disubmit.
+        disabled: Menonaktifkan input sehingga pengguna tidak dapat berinteraksi dengannya.
+        readonly: Membuat input hanya bisa dibaca, pengguna tidak dapat mengubah nilainya.
+        maxlength: Membatasi jumlah karakter yang dapat dimasukkan dalam input.
+        minlength: Membatasi jumlah karakter minimum yang harus dimasukkan.
+        size: Menentukan lebar visual dari input dalam karakter/default size:20
+        pattern: Menentukan ekspresi reguler untuk memvalidasi input.
+         Jika input tidak sesuai dengan ekspresi reguler, form tidak akan dapat disubmit
+         Ekspresi reguler adalah sebuah urutan karakter khusus yang digunakan untuk mencocokkan rangkaian
+          karakter tertentu dalam sebuah teks. Ekspresi reguler sangat berguna untuk memvalidasi 
+          berbagai jenis data, seperti alamat email, nomor telepon, kode pos, dan lain-lain.
+
+Atribut Khusus untuk Jenis Input Tertentu
+        checked: Untuk checkbox dan radio button, atribut ini akan membuat opsi tersebut terpilih secara default.
+        multiple: Untuk input type="file", memungkinkan pengguna memilih beberapa file sekaligus.
+        min: Menentukan nilai minimum untuk input type="number", "date", dan jenis input terkait lainnya.
+        max: Menentukan nilai maksimum untuk input type="number", "date", dan jenis input terkait lainnya.
+        step: Menentukan kenaikan atau penurunan nilai untuk input type="number" dan "range"
+        autofocus:menentukan bahwa bidang input harus secara otomatis mendapatkan fokus saat halaman dimuat.
+
+
+-->
+        <form action="/com.webp"
+              method="post" target="_blank" enctype="application/x-www-form-urlencoded"
+              autocomplete="on" novalidate >
+              
+        </form>
+        <br>
+        <!-- label -->
+         <from>
+            <!-- for attribute:menghubungkan label dan input,nama for sama dgn id -->
+            <label for="nama">first name</label><br>
+            <input type="text" name="nama" placeholder="input your name" required autocomplete="on">
+            <br>
+            <label for="email">email</label><br>
+            <input type="email" name="email" placeholder="readonly email" readonly>
+            <input type="submit" value="submit">
+            <!-- type=reset:reset input kecuali value placeholder-->
+            <input type="reset"  value="reset">
+            
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor">
+            
+         </form>
+    </body>
+</html>
+

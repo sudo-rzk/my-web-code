@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple"> -->
+    <title>font</title>
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <style>
+        .family{
+            /* font-family
+            Fungsi: Menentukan jenis font yang akan digunakan.
+            browser akan pioritaskan font pertama(disini arial dari semua font),
+            fallback:jika font tidak tersedia(di os,browser user)font sisanya generik akan dipakai  */
+            font-family: Arial, sans-serif;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        blockquote{font-family: Brush Script MT;}
+/* font style Fungsi: Mengatur gaya font (normal atau miring).
+Nilai: normal, italic, oblique. */
+p.normal {font-style: normal;}
+
+p.italic {font-style: italic;}
+
+p.oblique {font-style: oblique;}
+
+/* font size: Fungsi: Mengatur ukuran font. */
+.h1 {font-size: 40px;}
+
+.h2 {font-size: 30px;}
+
+.p1 {font-size: 14px;}
+/* google font  */
+.a{font-family: "Sofia", sans-serif ;}
+.b{font-family: Sofia;}
+.p2{font-family: emboss;}
+
+/* font-weight
+Fungsi: Mengatur ketebalan font.
+Nilai: Kata kunci (normal, bold, bolder, lighter) atau nilai numerik (100-900) */
+strong{font-weight: bold;}
+
+/* font-variant
+Fungsi: Mengatur variasi tampilan font (kecil caps, semua huruf besar, dll.).
+Nilai: normal, small-caps. */
+.heading2{font-variant: small-caps;}
+
+/* line-height Fungsi: Mengatur jarak antar baris teks.
+Nilai: Angka (misalnya: 1.5), satuan ukuran, atau kata kunci (normal). */
+.p3{line-height: 1.5;}
+/* shorthand (/)space*/
+.h3{font:20px italic, sans-serif;}
+.heading3{font: italic small-caps bold 12px/30px Georgia, serif;}
+    </style>
+</head>
+<body>
+    <h2 class="family">FONT FAMILY:aku lagi sendirian</h2>
+    <blockquote>everything for the family</blockquote>
+    <h1>The font-style property</h1>
+
+<p class="normal">This is a paragraph in normal style.</p>
+<p class="italic">This is a paragraph in italic style.</p>
+<p class="oblique">This is a paragraph in oblique style.</p>
+    
+<h1 class="h1">This is font size</h1>
+<h2 class="h2">This is heading 2</h2>
+<p class="p1">This is a paragraph.</p>
+<p>Specifying the font-size in percent and em displays the same size in all major browsers, and allows all browsers to resize the text!</p>
+ 
+<h1 class="a">google font</h1>
+<h2 class="b">google font </h2>
+<p class="p2">This is a paragraph.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit reiciendis voluptatum a! Nulla quod pariatur cupiditate vel dolores quis sapiente dicta quaerat, aliquid quasi modi, expedita assumenda minus eaque vero.
+
+<h2 class="heading">font weight</h2>  
+<p class="para3">Lorem ipsum dolor sit<strong> amet consectetur adipisicing elit</strong>. Dolorum ut saepe quos eos sed exercitationem ea, vero fugit fugiat autem incidunt earum culpa dicta cum laboriosam aspernatur. Provident, quisquam fugit! </p>
+
+<h2 class="heading2">font variant</h2>
+<p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rem quos culpa autem iste voluptas aperiam officiis harum voluptatum quas, laborum cumque, quasi ratione numquam nisi eaque voluptatem eius quibusdam.</p>
+
+<h2 class="heading3">line height</h2>
+
+ <h2 class="h3">shorthand</h2>  
+ <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt quasi architecto soluta. Architecto, suscipit libero cum enim ut ex, nemo natus rem nulla nobis, dolorum adipisci tenetur esse repellat.</p> 
+</body>
+</html>

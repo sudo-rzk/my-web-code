@@ -1,0 +1,78 @@
+Kondisi untuk Mengatur HTML dan Body
+
+Untuk mengatur gaya (styling) pada elemen <html> dan <body>:
+
+1. Selektor Universal (*)
+Fungsi: Selektor universal (*) menargetkan semua elemen dalam dokumen HTML.
+Penggunaan: Untuk mengatur gaya dasar yang berlaku untuk semua elemen, seperti mengatur font default, margin, atau padding.
+Contoh:
+CSS
+
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+Kode di atas akan mengatur semua elemen di halaman untuk menggunakan font Arial, menghapus margin dan padding default.
+
+2. Selektor Tipe Elemen
+Fungsi: Menargetkan elemen berdasarkan nama tag-nya.
+Penggunaan: Untuk mengatur gaya spesifik untuk elemen <html> dan <body>.
+Contoh:
+CSS
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+Kode di atas akan mengatur ukuran font default untuk seluruh dokumen menjadi 16px dan memberikan warna latar belakang abu-abu pada elemen <body>.
+
+3. Kombinasi Selektor
+Fungsi: Menggabungkan beberapa selektor untuk menargetkan elemen yang lebih spesifik.
+Penggunaan: Untuk mengatur gaya pada elemen <html> atau <body> dalam kondisi tertentu.
+Contoh:
+CSS
+
+html.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+Kode di atas akan mengubah warna latar belakang dan teks menjadi mode gelap jika elemen <html> memiliki kelas dark-mode.
+
+Kapan Menggunakan Selektor Mana?
+Selektor universal (*) cocok untuk mengatur gaya dasar yang berlaku untuk semua elemen.
+Selektor tipe elemen digunakan untuk menargetkan elemen <html> dan <body> secara spesifik.
+Kombinasi selektor berguna untuk membuat gaya yang lebih kompleks dan responsif.
+Tips Tambahan
+Urutan Penulisan: Urutan penulisan aturan CSS sangat penting. Aturan yang ditulis terakhir akan menimpa aturan sebelumnya jika ada konflik.
+Spesifisitas: Semakin spesifik selektor, semakin kuat pengaruhnya. Selektor ID lebih spesifik daripada kelas, dan kelas lebih spesifik daripada tag.
+Warisan: Gaya dari elemen induk akan diwariskan ke anak-anaknya, kecuali jika gaya anak tersebut menimpa gaya induknya.
+
+
+Nilai Default Browser: adalah pengaturan awal yang sudah ditetapkan oleh browser web 
+untuk berbagai properti CSS. Nilai-nilai ini digunakan sebagai dasar ketika kita tidak secara eksplisit mengatur nilai 
+
+Contoh Nilai Default yang Sering Diubah:
+
+Margin dan Padding: Banyak elemen HTML memiliki margin dan padding 
+                   default yang berbeda-beda di setiap browser. Ini bisa menyebabkan jarak 
+                   antar elemen menjadi tidak konsisten
+Font: Setiap browser memiliki font default yang berbeda. Jika tidak diatur, 
+       tampilan teks di website Anda bisa terlihat berbeda di setiap browser.
+List Style: Elemen <ul> dan <ol> biasanya memiliki bullet atau nomor secara default.
+        Jika Anda tidak ingin menampilkannya, Anda perlu mengatur nilai list-style menjadi none
+
+
+
+Kapan Harus Menghapus Nilai Default dan Menggantinya dengan 0?
+
+Margin dan Padding: Mengatur nilai margin dan padding menjadi 0 adalah cara yang umum 
+untuk memulai sebuah proyek desain. Hal ini akan memberikan Anda kontrol penuh atas jarak antar elemen.  
+* {
+  margin: 0;
+  padding: 0}
+ mengatur semua elemen di halaman untuk tidak memiliki margin dan padding default       

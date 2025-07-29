@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text shadow advanced</title>
+    <style>
+    /* text-shadow: Digunakan untuk menambahkan bayangan pada teks
+    syntax:
+     text-shadow: horizontal-shadow vertical-shadow blur-radius color;
+     
+     horizontal:shadow kanan(nilai positif) kiri(negatif)
+     vertical:shadow bawah(nilai positif) atas(negatif)
+     blur-radius: radius bayangan tebal(kecil) semakin blur(besar)
+     
+     */
+        .txt1{
+    /* horizontal:shadow ke kanan 2px,vertical:shadow ke bawah 2px,blur:5px,color black */
+            text-shadow: 2px 2px 5px #000000; /* horizontal-shadow vertical-shadow*/
+        }
+        .txt2{
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        .txt3{
+            color: coral;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+        i{
+           
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+       }
+       .tree {
+            text-shadow: 
+                12px 10px 20px rgba(0, 0, 0, 0.3),  /* Bayangan dalam, sedikit kabur */
+                12px 12px  20px blue,                /* Bayangan biru yang lebih besar */
+                10px 10px 15px rgba(255, 0, 0, 0.2);  /* Bayangan merah yang sangat kabur */
+            }
+            
+        
+
+    </style>
+</head>
+<body>
+    <h3 class="txt1">apakah kebenaran yang selama ini kita anggap benar itu benar?</h3>
+    <h3 class="txt2">kemalasan adalah bagian diri ,hanya dengan sedikit kesadaran bisa mengengkang kemalasan itu </h3>
+    <h3 class="txt3">quotes 12/02/25: <i>gambare cilikno ,opo utekmu sg jalok digedekne</i></h3>
+    <h3 class="tree">tiga shadow</h3>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/*Background CSS adalah properti yang digunakan untuk mengatur tampilan latar belakang 
+dari suatu elemen HTML
+
+ specifies the background color of an element */
+body{
+    /* background-color: #f2f2f2; */
+    /*  Menambahkan gambar sebagai latar belakang elemen */
+    background-image:url(jiraiya\ quotecopy.png );
+    /* Mengatur pengulangan gambar latar belakang */
+    /* no-repeat (tidak diulang), repeat (diulang secara horizontal dan vertikal),
+     repeat-x (diulang secara horizontal), repeat-y (diulang secara vertikal) */
+    background-repeat: no-repeat; 
+/* Mengatur ukuran gambar latar belakang: cover (mengisi seluruh area elemen),
+   contain (menyesuaikan ukuran gambar agar seluruh gambar terlihat), atau nilai numerik (misalnya: 200px 300px).   */
+    background-size:contain ;  
+}
+#div1{
+     background-image: url(pohon\ contoh.svg);
+     /* Mengatur posisi gambar latar belakang :bottom,left,center,top atau numeric 50% */
+     background-position:top right; /*bisa dua*/
+     text-align: center;
+     color: red;
+}
+#div2{
+    background-image: url(pohon\ contoh.svg);
+/* lampiran:Mengatur apakah gambar latar belakang akan tetap diam atau bergerak saat pengguna menggulir halaman
+ scroll (gambar akan bergerak bersama elemen), fixed (gambar akan tetap diam saat pengguna menggulir)*/
+    background-attachment:fixed;
+    color: crimson;
+}
+#p1{
+    /* menentukan opacity/transparent :value 0.0-1.0*/
+    background-color: blue;
+    opacity: 0.5;
+}
+#p2{
+    /* memakai rgba */
+    background: rgba(0, 128, 0, 0.1); 
+}
+
+/* Shorthand property
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+
+
+*/
+

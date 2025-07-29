@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown img</title>
+    <style>
+        .dropdown-img{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: darkgray;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 0;
+        }
+        .dropdown-img:hover .dropdown-content{
+            display: block;
+        }
+        span{
+            padding: 15px;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        .dropdown-img-button{
+            position: relative;
+            display: inline-block;
+           
+        }
+        .dropdown-button{
+            background-color:forestgreen;
+            color: beige;
+            padding: 16px;
+            font-size: 16px;
+            border:none;
+            cursor: pointer;
+        }
+        .dropdown-btn{
+            display: none;
+            position: absolute;
+            background-color: darkseagreen;
+            min-width: 160px;
+            box-shadow:  0px 8px 16px 0px rgba(0, 0, 0, 0.273);
+            z-index: 1;
+        }
+        .dropdown-img-button:hover .dropdown-btn{
+            display: inline-block;
+        }
+        .span{
+            display: inline-block;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>dropdown img gift</h2>
+    <div class="dropdown-img">
+        <img src="ganjar-wong-saya-suka-kok.gif" alt="ganjaran" width="100" height="50">
+        <div class="dropdown-content">
+            <img src="ganjar-wong-saya-suka-kok.gif" alt="ganjaran" width="500" height="400">
+            <span>wong saya suka kok.gift</span>
+        </div>
+    </div>
+    <h2>dropdown img button</h2>
+    <div class="dropdown-img-button">
+        <button class="dropdown-button">Dropdown Button</button>
+        <div class="dropdown-btn">
+            <img src="ganjar-wong-saya-suka-kok.gif" alt="ganjaran" width="400" height="340">
+            <span class="span">dropdown pake button hahahaha</span>
+        </div>
+    </div>
+</body>
+</html>

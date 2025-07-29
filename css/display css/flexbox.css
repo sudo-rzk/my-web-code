@@ -1,0 +1,73 @@
+       /*
+Flexbox (Flexible Box Layout) adalah model layout CSS untuk mengatur 1 dimensi tata letak elemen-elemen dalam wadah (container)
+1 dimensi: menentukan antara row atau  colum tidak bisa keduanya
+Konsep Dasar Flexbox:
+Flex Container: Wadah yang berisi elemen-elemen Flexbox membuat flex container dengan mengatur properti display: flex; pada wadah tersebut
+Main Axis(horizontal): Sumbu utama tempat elemen-elemen flex disusun Arah main axis ditentukan oleh properti flex-direction.
+Cross Axis(vertical): Sumbu yang tegak lurus terhadap main axis
+
+Properti flexbox
+display: flex;: Mengaktifkan Flexbox pada wadah.
+flex-direction: Menentukan arah main axis. Nilai-nilai yang umum digunakan adalah:
+    row (default): Elemen-elemen disusun secara horizontal dari kiri ke kanan.
+    row-reverse: Elemen-elemen disusun secara horizontal dari kanan ke kiri.
+    column: Elemen-elemen disusun secara vertikal dari atas ke bawah.
+    column-reverse: Elemen-elemen disusun secara vertikal dari bawah ke atas.
+justify-content: Mengatur perataan elemen-elemen pada main axis Nilai-nilai yang umum digunakan adalah:
+    flex-start (default): Elemen-elemen diratakan ke awal main axis(bawah kiri)
+    flex-end: Elemen-elemen diratakan ke akhir main axis.(bawah kanan)
+    center: Elemen-elemen diratakan ke tengah main axis.
+    space-between: Elemen-elemen didistribusikan secara merata di sepanjang main axis, dengan elemen pertama dan terakhir menempel pada tepi wadah
+    space-around: Elemen-elemen didistribusikan secara merata di sepanjang main axis, dengan ruang yang sama di sekitar setiap elemen.
+    space-evenly: Elemen-elemen didistribusikan secara merata di sepanjang main axis, dengan ruang yang sama di antara setiap elemen.
+align-items: Mengatur perataan elemen-elemen pada cross axis. Nilai-nilai yang umum digunakan adalah:
+    flex-start: Elemen-elemen diratakan ke awal cross axis.
+    flex-end: Elemen-elemen diratakan ke akhir cross axis.
+    center: Elemen-elemen diratakan ke tengah cross axis.
+    baseline: Elemen-elemen diratakan berdasarkan baseline teks mereka.
+    stretch (default): Elemen-elemen diregangkan untuk mengisi cross axis.
+flex-wrap: Menentukan apakah elemen-elemen akan dibungkus ke baris atau kolom baru jika tidak muat dalam wadah. Nilai-nilai yang umum digunakan adalah:
+    nowrap (default): Elemen-elemen tidak dibungkus.
+    wrap: Elemen-elemen dibungkus ke baris atau kolom baru.
+    wrap-reverse: Elemen-elemen dibungkus ke baris atau kolom baru dalam urutan terbalik.*/
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        border: 1px solid black;
+    }
+    .item{
+        width: 100px;
+        height: 50px;
+        background-color: crimson;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .flex-container{
+        display: flex;
+        background-color: dodgerblue;
+        align-items: center;
+        justify-content: center;
+    }
+    .items{
+        background-color: whitesmoke;
+        margin: 10px;
+        padding: 10px;
+        font-size: large;
+    }
+
+    .flex-direction{
+        display: flex;
+        flex-direction: column-reverse;
+        border: 4px solid black;
+    }
+    .box1{
+        width: 100px;
+        height: 50px;
+        background-color: darkcyan;
+        margin: 10px;
+        font-size: large;
+        /* justify-content: center; */
+    }

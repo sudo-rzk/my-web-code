@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table css</title>
+    <style>
+.table,.td,.th{border: 2px solid ;}
+.table1,.td1,.th1{border: 2px solid;}
+.table1{width: 50%;border-collapse: collapse;}
+/* memperbesar th atas */
+.th1{height: 40px;}
+
+/* tabel alignment */
+.table2,.td2,.th2 {
+  border: 1px solid black;
+}
+.table2{
+  border-collapse: collapse;
+  width: 50%;
+}
+.td2{
+  text-align: center;
+}
+/* vertical align: atur vertical alignment (like top, bottom, defalut:middle) */
+.table3,.td3,.th3 {
+  border: 1px solid black;
+}
+
+.table3{
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.td3 {
+  height: 50px;
+  vertical-align: middle;
+}
+
+.table4{
+    border-collapse: separate;
+    
+}
+.th4,.td4{
+    border: 2px solid ;
+}
+.th4{background: black;color: aliceblue;}
+    </style>
+</head>
+<body>
+    <!-- only html -->
+    <table border="2">
+        <tr>
+            <th>fname</th>
+            <th>lname</th>
+        </tr>
+        <tr>
+            <td>joe</td>
+            <td>doe</td>
+        </tr>
+    </table>
+    <br>
+    <table class="table">
+        <tr>
+            <th class="th">fname</th>
+            <th class="th">lname</th>
+        </tr>
+        <tr>
+            <td class="td">joe</td>
+            <td class="td">doe</td>
+        </tr>
+    </table>
+    <br>
+    <table class="table1">
+        <tr>
+            <th class="th1">name</th>
+            <th class="th1">job</th>
+        </tr>
+        <tr>
+            <td class="td1">peter</td>
+            <td class="td1">web developer</td>    
+        </tr>
+        <tr>
+            <td class="td1">bruce</td>
+            <td class="td1">network administrator</td>
+        </tr>
+    </table>
+    <br>
+    <table class="table2">
+        <tr>
+            <th class="th2">name</th>
+            <th class="th2">job</th>
+        </tr>
+        <tr>
+            <td class="td2">peter</td>
+            <td class="td2">web developer</td>    
+        </tr>
+        <tr>
+            <td class="td2">bruce</td>
+            <td class="td2">network administrator</td>
+        </tr>
+    </table>
+    <br>
+    <table class="table3">
+        <tr>
+            <th class="th3">name</th>
+            <th class="th3">job</th>
+        </tr>
+        <tr>
+            <td class="td3">peter</td>
+            <td class="td3">web developer</td>    
+        </tr>
+        <tr>
+            <td class="td3">bruce</td>
+            <td class="td3">network administrator</td>
+        </tr>
+    </table>
+    <br>
+    <table class="table4">
+        <tr>
+            <th class="th4">no</th>
+            <th class="th4">product</th>
+            <th class="th4">price</th>
+        </tr>
+        <tr>
+            <td class="td4">1</td>
+            <td class="td4">laptop</td>    
+            <td class="td4">$200</td>
+        </tr>
+        <tr>
+            <td class="td4">2</td>
+            <td class="td4">router zte</td>
+            <td class="td4">$50</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+body{
+    font: 18px / 32px ;
+    font-family: Lucida Sans;
+    background-color:gainsboro;
+    height: 1000px;
+}
+.clear{
+    clear:both;
+
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0, 0, 0);
+    z-index: 9999;
+    transition: .8s;
+    overflow: hidden;
+    text-align: center;
+    padding: 100px 0;
+}
+.overlay:target{
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: #333;
+}
+.overlay img{
+    max-height: 100%;
+    box-shadow: 2px 2px 7px  rgba(0,0,0,.5);
+}
+.overlay:target img{
+    animation: zoomdanfade 1s;
+}
+.overlay .close{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -20px;
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    border: 1px solid white;
+    line-height: 14px;
+    padding: 5px;
+    opacity: 0;
+}
+.overlay:target .close{
+   animation: slidedownfade .5s .5s forwards;
+}
+@keyframes zoomdanfade{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slidedownfade{
+    0%{
+        opacity: 0;
+        margin-top:-20px ;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+h1{
+    font-size: 45px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
+}
+.container{
+    width: 900px;
+    height: 299px;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 3px rgba(0,0, 0,0.3);
+    border-radius: 5px;
+    position: relative;
+}
+
+.gallery li{
+    /* overflow: hidden; */
+    width: 140px;
+    height: 140px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 5px solid #666;
+    float: left;
+    margin-right: 94px;
+    position: relative;
+    list-style: none;
+    
+    
+}
+.gallery li,
+.gallery li a img,
+.gallery li span {
+	border-radius: 25;
+}
+
+.gallery li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* padding: 1px; */
+    
+}
+#abrifoto{
+    width: 140px ;
+    height: 140px ;
+    border-radius: 50%;
+    
+}
+#renjerfoto{
+    width: 140px ;
+    height: 140px ;
+    border-radius: 50%;
+    top: 4%;
+    position: relative;
+    
+}
+.gallery li span{
+    display: block;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(200, 200, 200,0.5);
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    text-align: center;
+    line-height: 140px;
+    color:#333;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 1px #666;
+    opacity: 0;
+    transition: 0.4s;
+    transform: scale(0) rotate(0);
+}
+    
+/* hover muncul span*/
+ a:hover span{
+    opacity: 4;
+    transform: scale(1) rotate(360deg);
+    transition: 1s;
+
+}
+
+.gallery li #renjerspan{
+    display: block;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(200, 200, 200,0.5);
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 140px;
+    color:#333;
+    font-size: 28px;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 1px #666;
+    opacity: 0;
+    transition: 0.4s;
+    transform: scale(0) rotate(0);
+}
+
+a:hover #renjerspan{
+    opacity: 4;
+    transform: scale(1) rotate(360deg);
+    transition: 1s;
+
+}
+
+.gallery li #spetnazspan{
+    display: block;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(200, 200, 200,0.5);
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 140px;
+    color:#333;
+    font-size: 27px;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 1px #666;
+    opacity: 0;
+    transition: 0.4s;
+    transform: scale(0) rotate(0);
+}
+a:hover #spetnazspan{
+    opacity: 4;
+    transform: scale(1) rotate(360deg);
+    transition: 1s;
+}

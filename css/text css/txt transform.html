@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>txt transform and spacing</title>
+    <style>
+        /* text-transformdigunakan untuk menentukan huruf besar dan huruf kecil dalam suatu teks. */
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+
+div.spacing{
+  border: 4px solid orange;
+}
+/* txt indent:membuat spasi baris pertama paragraf kewren
+length: Nilai numerik diikuti satuan (px, em, dll.) untuk menentukan jarak penjorokan.
+%: Persentase dari lebar kotak berisi. */
+p.indent {
+  text-indent: 50px;
+}
+/* letter-spacing
+Fungsi: Mengatur jarak antara setiap karakter dalam sebuah teks.
+Nilai:
+normal: Mengembalikan ke pengaturan default.
+length: Nilai numerik diikuti satuan (px, em, dll.). Nilai positif untuk menambah jarak, nilai negatif untuk mengurangi jarak. */
+p.letter_spacing{
+  letter-spacing: 5px;
+}
+/* line-height
+Fungsi: Mengatur jarak antar baris teks.
+Nilai:
+normal: Tinggi baris diatur secara otomatis oleh browser.
+number: Nilai numerik yang merupakan kelipatan dari ukuran font. Misalnya, line-height: 1.5 berarti tinggi baris 1.5 kali ukuran font.
+length: Nilai numerik diikuti satuan (px, em, dll.). */
+p.line-height{line-height: 2em;}
+/*word-spacing: Mengatur jarak antara setiap kata dalam sebuah teks. 
+               Nilai sama seperti letter-spacing. */
+p.word-space{word-spacing: normal;}
+/* white-spacemenentukan bagaimana ruang putih dalam suatu elemen ditangani */
+p.white-space{white-space: nowrap;}
+p.mix-space{
+  white-space: normal;
+  letter-spacing: normal;
+  text-indent: 4px;
+}
+
+    </style>
+</head>
+<div>
+<h3>txt transformed</h3>  
+<p class="uppercase">This text is transformed to uppercase.</p>
+<p class="lowercase">This text is transformed to lowercase.</p>
+<p class="capitalize">This text is capitalized.</p>
+
+<div class="spacing">
+<h3>txt spacing</h3>
+<p class="indent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit temporibus pariatur quaerat, ipsam iusto eum aliquid sed? Ab, mollitia nulla minima soluta modi nisi minus. Nulla cupiditate quis soluta consequatur.</p>
+<p class="letter_spacing">This text letter spacing</p>
+<p class="line-height">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi architecto nihil asperiores doloremque, consequuntur tempore. Consequatur, nisi nulla. Corrupti dolores repellendus nihil perspiciatis quibusdam necessitatibus ducimus, voluptatem eius excepturi cum!</p>
+<p class="word-space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum adipisci itaque ab odit. Eaque placeat temporibus obcaecati iste inventore ipsum molestiae illo minima quibusdam animi perspiciatis similique voluptatibus, nobis quis.</p>
+<p class="white-space">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, nisi debitis. Pariatur aut laudantium maiores? Nobis vel accusamus beatae ea earum error possimus exercitationem ratione, deserunt, repudiandae maxime odit a.</p>
+<p class="mix-space">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum sed sapiente dicta assumenda reiciendis tempore obcaecati vero blanditiis enim velit, voluptatem, laboriosam beatae, omnis minima? Reiciendis velit exercitationem non repudiandae.</p>
+</div>   
+</body>
+</html>

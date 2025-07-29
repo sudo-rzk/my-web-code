@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background attachment</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+    /* background-attachment: digunakan untuk menentukan apakah gambar latar belakang akan 
+       ikut bergulir bersama konten atau tetap diam saat pengguna menggulir halaman. */
+        .p1{
+        background-image: url(jiraiya\ quotecopy.png);
+        /* scroll: (default) Gambar akan bergulir bersama konten. Ini adalah perilaku normal untuk gambar latar belakang */
+        background-attachment: scroll;
+        
+
+        }
+        .p2{
+            background-image: url(jiraiya\ quotecopy.png);
+        /* fixed: Gambar akan tetap diam saat konten digulir. Ini sering digunakan untuk membuat efek parallax atau 
+                latar belakang yang tidak bergerak.     */
+            background-attachment: fixed;
+        
+            
+            }
+        .p3{
+            background-image: url(jiraiya\ quotecopy.png);
+            /* local: Gambar akan bergulir relatif terhadap elemen induknya. */
+            background-attachment: local;
+        }    
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem incidunt distinctio corporis ipsum mollitia exercitationem corrupti et amet pariatur accusamus repudiandae libero quaerat similique, veniam dignissimos asperiores id repellat atque?Sed repudiandae dignissimos necessitatibus quas a, debitis architecto voluptates porro, fugit soluta accusamus? Dicta id facilis labore placeat porro natus quos officia. </p>
+    </div>
+    <br>
+    <p class="p2"> There were doors all round the hall, but they were all locked; and when Alice
+        had been all the way down one side and up the other, trying every door, she
+        walked sadly down the middle, wondering how she was ever to get out again.</p>
+    <br>
+    <p class="p3"> There were doors all round the hall, but they were all locked; and when Alice
+        had been all the way down one side and up the other, trying every door, she
+        walked s</p>    
+</body>
+</html>

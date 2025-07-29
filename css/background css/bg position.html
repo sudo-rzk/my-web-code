@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background position</title>
+    <style>
+        .container1{
+           background-image:url(star.png);
+           background-repeat: no-repeat;
+           background-position: center ;
+           background-color: blue;
+           width: 300px;
+           height: 80px;
+           margin-bottom: 12px;
+           
+        }
+        .container2{
+           background-image:url(star.png);
+           background-repeat: no-repeat;
+           background-position: top bottom ;
+           background-color: blue;
+           width: 300px;
+           height: 80px;
+           margin-bottom: 12px;
+           
+        }
+        .container3{
+           background-image:url(star.png);
+           background-repeat: no-repeat;
+           background-position: left right ;
+           background-color: blue;
+           background-size: contain;
+           width: 300px;
+           height: 200px;
+           margin-bottom: 12px;
+           
+        }
+        .container4{
+           background-image:url(star.png);
+           background-repeat: no-repeat;
+           background-position: 20% 50% ;
+           background-color: blue;
+           background-size: contain;
+           width: 300px;
+           height: 200px;
+           margin-bottom: 12px;
+           
+        }
+        .container5{
+           background-image:url(star.png);
+           background-repeat: no-repeat;
+           /* nilai awal  x   nilai akhir y */
+           background-position:bottom 10px right 20px ;
+           background-color: blue;
+           background-size: contain;
+           width: 300px;
+           height: 200px;
+           margin-bottom: 12px;
+           
+        }
+    </style>
+</head>
+<body>
+    <h3>Background position:center </h3>
+    <div class="container1"></div>
+    <h3>Background position:top or bottom </h3>
+    <div class="container2"></div>
+    <h3>Background position:left or right</h3>
+    <div class="container3"></div>
+    <h3>Background position:satuan </h3>
+    <div class="container4"></div>
+    <h3>Background position:mix </h3>
+    <div class="container5"></div>
+</body>
+</html>

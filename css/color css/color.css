@@ -1,0 +1,56 @@
+/* RGB: Menentukan intensitas masing-masing warna dasar (merah, hijau, biru) dalam skala 0-255 */
+#p1{
+    /* seperti ini default:0 = hitam */
+    color: rgb(red, green, blue);
+}
+/* SALAH SATU */
+#p2{
+    color:rgb(255,0,0)
+}
+/* CAMPURAN */
+#p3{
+    color: rgb(12,60,60);
+}
+/* RGBA (Red, Green, Blue, Alpha):
+Cara kerja: Sama seperti RGB, tetapi menambahkan satu nilai lagi yaitu alpha, 
+yang menentukan tingkat transparansi warna. */
+#judul1{
+    /* default */
+    background-color:rgba(red, green, blue, alpha);
+    text-align: center;
+}
+#judul2{
+    /* transparent 50% */
+    background-color:rgba(255, 0, 0,0.5);
+}
+/* HEX (Hexadecimal):
+Cara kerja: Menggunakan sistem bilangan heksadesimal untuk mewakili nilai RGB.  
+Setiap warna dasar direpresentasikan oleh dua digit heksadesimal (0-9, A-F). */
+#judul3{
+    /* sama rgb(0,0,0), keduanya menghasilkan hitam murni. */
+    background-color: #000;
+    color: #ff0000;
+}
+/* HSL (Hue, Saturation, Lightness):
+Cara kerja: Mendefinisikan warna berdasarkan hue (warna dasar), 
+saturation (tingkat kejenuhan warna), dan lightness (tingkat kecerahan)
+hue:0 hingga 360. 0 adalah merah, 120 adalah hijau, dan 240 adalah
+saturation:nilai persentase. 0% berarti corak abu-abu, dan 100% merupakan warna penuh 
+linghtness:persentase 0% adalah hitam, 50% tidak terang atau gelap, 100% adalah putih/cerah*/
+#judul4{
+    /* default */
+    color:hsl(hue, saturation, lightness)
+}
+#p4{
+    color: hsl(195, 61%, 80%);
+}
+/* Nilai HSLA
+Nilai warna HSLA merupakan perluasan nilai warna HSL dengan alfa - 
+yang menentukan transparant suatu warna */
+#judul5{
+    /* default */
+    color:hsla(hue, saturation, lightness, alpha)
+}
+#p5{
+    color: hsla(252, 10%, 90%, 0.95);
+}

@@ -1,0 +1,135 @@
+<!-- properti list html and css 
+     In HTML, there are two main types of lists:
+
+unordered lists (<ul>) - the list items are marked with bullets
+ordered lists (<ol>) - the list items are marked with numbers or letters
+
+The CSS list properties allow you to:
+
+Set different list item markers for ordered lists
+Set different list item markers for unordered lists
+Set an image as the list item marker
+Add background colors to lists and list items -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list css</title>
+    <style>
+/* list style type ,default :none(remove)*/
+/* unordered list */
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+/* ordered list */
+ol.c {
+  list-style-type:armenian;
+  margin-left: 15%;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+/* mengatur gambar sebagai bullet list */
+ul.e{list-style-image: url('do\ listjpg.jpg');}
+/* mengatur posisi bullet */
+/* inside: Bullet atau nomor berada di dalam area konten item list */
+ol.f{list-style-position: outside;}
+/* outside: Bullet atau nomor berada di luar area konten item list */
+ul.g{list-style-position: inside;}
+/* shorthand */
+ul.h{list-style: lower-greek outside;}
+/* style color padding */
+ul.i{background: chartreuse;
+     padding: 20px;
+      }
+ul.i li{
+  background: #b7de87ae;
+  color: rgb(59, 43, 166);
+  padding: 5px;
+  margin-left: 35px;
+}
+ol.j{
+  background-color: lightseagreen;
+  padding:20px ;
+
+} 
+ol.j li{
+  list-style-type: armenian;
+  background-color: rgb(183, 255, 0);
+  color: black;
+  margin: 5px;
+}     
+</style>
+
+</head>
+<body>
+    <h2>The list-style-type Property</h2>
+
+<p>Example of unordered lists:</p>
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>Example of ordered lists:</p>
+<ol class="c">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="d">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ul class="e">
+  <li>router</li>
+  <li>repeter</li>
+  <li>acces point</li>
+</ul>
+<br>
+<ol class="f">
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim recusandae voluptas harum porro, et ullam quis nam in quos laudantium eaque voluptates numquam saepe fugiat dolorem labore. Corporis, veniam deserunt.</li>
+  <li>katakan semua lebih nyaman jika pilihan lebih sedikit dan tak membuat perasaan terasa menyesal</li>
+  <li>hari yang cerah merenung dengan gaya stoic,tak perlu khawatir sekarang pedulikan diri sendiri ,karena beda orang beda alur cerita kehidupaanya</li>
+</ol>  
+
+<ul class="g">
+  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolores corrupti temporibus suscipit tempora magnam, recusandae nesciunt asperiores fuga minima neque quibusdam consequatur ex fugit doloribus numquam officiis harum illo?</li>
+  <li>kenapa manusia mudah terlena dgn kenyamanan ,justru dgn penderitaan dan rasa sakit manusia memiliki arti dalam hidup mereka dan layak diperjuangkan</li>
+  <li>depresi segenerasi ,hidup dgn serba ada,instan dan terlihat tak perlu untuk melakukan apa apa ,dan kenyamanan ini diciptakan dari generasi sebelumnya yang hidup dalam penderitaan,mereka berharap jika akan ada kedamaian tetapi terlalu nyaman membuat tak ada perjuangan </li>
+</ul>
+
+<ul class="h">
+  <li>web development</li>
+  <li>mobile development</li>
+  <li>data science</li>
+</ul>
+
+<ul class="i">
+  <li>percayalah pada dasarnya manusia itu baik</li>
+  <li>percaya keadilan,harapan masih bisa ada walaupun dalam situasi sulit</li>
+  <li>cinta itu rapuh justru dgn ketakutan lebih membuat cinta itu ada</li>
+</ul>
+<ol class="j">
+  <li>manusia menciptakan tatanan dan peraturan dan ia langgar sendiri</li>
+  <li>hanya 1 hal buruk bisa membuat manusia menjadi jahat </li>
+  <li>manusia akan menunjukkan sifat asli nya jika ada kesempatan dan disituasi buruk</li>
+</ol>
+</body>
+</html>

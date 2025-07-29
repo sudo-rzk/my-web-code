@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> basic nav horizontal</title>
+    <style>
+  body{
+    margin: 0;
+  } 
+  div{
+    padding: 20px;
+    margin-top: 30px;
+    height: 1500px;
+  }     
+ul {
+  list-style-type: none;
+  margin: 0; /*menghpaus margin default browser*/
+  padding: 0; /*menghapus padding default browser*/
+  /* posisi nav diatas */
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  /* membuat sticky */
+  position: fixed;
+  background-color: hsla(0, 0%, 20%, 0.837);
+}
+
+li {
+  float:left;
+  /* membuat jarak antar item */
+  border-right: 1px solid whitesmoke;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+        li a:hover:not(.active){
+            background-color: black;
+        }
+        .active{
+            background-color:crimson;
+            
+        }
+    </style>
+</head>
+<body>
+ <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+ </ul>
+
+  <div>
+    <h2>basic nav horizontal</h2>
+    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, animi ex impedit earum reiciendis veritatis! Reiciendis deserunt ipsam numquam hic error alias consequatur ab provident dolorem sequi odio, soluta eum?</p>
+  </div>
+ 
+</body>
+</html>

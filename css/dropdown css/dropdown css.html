@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown button </title>
+    <style>
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn{
+            background-color: cornflowerblue;
+            color: beige;
+            padding: 16px;
+            font-size: 16px;
+            border:none;
+            cursor: pointer;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color:antiquewhite;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block      
+        }
+        /* memberikan background pada dropdown */
+        .dropdown-content a:hover {
+            background-color: rgba(240, 255, 255, 0.856);
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        /* saat hover button */
+        .dropdown:hover .dropbtn{
+            background-color: hsla(219, 79%, 66%, 0.677);
+        }
+
+
+    </style>
+</head>
+<body>
+<h2>Dropdown Menu</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <!-- container for dropdown content -->
+  <div class="dropdown-content">
+  <a href="#">about</a>
+  <a href="#">machine learning</a>
+  <a href="#">layanan bantuan </a>
+  </div>
+</div>
+</body>
+</html>

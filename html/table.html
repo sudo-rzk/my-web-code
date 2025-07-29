@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table</title>
+</head>
+<body>
+    <h1>Table</h1>
+    <table border="1">
+        <!-- tr(table row) = membuat baris/kolom -->
+        <!-- th(table heder) = membuat header/kolom huruf akan bold -->
+        <!-- td(table data) = membuat data/cell -->
+        <!-- border = membuat border -->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <h4>dengan header</h4>
+    <table border="1">
+        <tr>
+            <th>jumat</th>
+            <td>10</td>
+            <td>05</td>
+            <td>2024</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+            <th>jumat</th>
+            <th>senin</th>
+            <tr>
+                <td>10:00</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>16:00</td>
+            </tr>
+    </table>
+    <br>
+    <!-- tabel seperti jadwal -->
+    <table border="1">
+        <th>time</th>
+        <th>senin</th>
+        <tr>
+            <th>07:00</th>
+            <td>go to school</td>
+        </tr>
+        <tr>
+            <th>10:00</th>
+            <td>time break</td> 
+        </tr>           
+    </table>
+    <h4>alokasi kolom</h4>
+    <!-- dipake saat tau berapa jumLah yg diinginkan -->
+    <!-- colspan = untuk mengalokasikan kolom -->
+    <!-- rowspan = untuk mengalokasikan baris -->
+    <table border="1">
+        <th>time</th>
+        <th>senin</th>
+        <th>selasa</th>
+        
+
+        <tr>
+            <th rowspan="1">07:00</th>
+            <td colspan="2">go to school</td>
+        </tr>
+        <tr>
+            <th rowspan="1">08:00</th>
+            <td colspan="2">breakfast</td>
+        </tr>
+        <tr>
+            <th rowspan="1">13:00</th>
+            <td colspan="2">solat dzuhur</td> 
+        </tr>
+        <tr>
+            <th rowspan="1">13:20</th>
+            <td colspan="2">pulang sekolah</td>
+        </tr>
+    </table>
+
+    <h4>multiple colums</h4>
+     <!-- multiple colums -->
+      <table border="1">
+        <th colspan="3">jadwal baru</th>
+        
+        <tr>
+           <th>time</th>
+           <th>activity student</th>
+        </tr>
+        <tr>
+            <th rowspan="1">07:00-09:45</th>
+            <td>belajar pagi</td>
+        </tr>
+        
+        <tr>
+            <th rowspan="1">09:45-10:00</th>
+            <td>break</td>
+        </tr>
+        <tr>
+            <th>10:00-12:00</th>
+            <td>belajar lagi</td>
+        </tr>
+        <tr>
+            <th>12:00-13:00</th>
+            <td>isoma</td>
+        </tr>
+        <tr>
+            <th>13:00-15:15</th>
+            <td>belajar ampe pulang</td>
+        </tr>
+</table>
+<!-- menambahkan keterangan yang berfungsi sebagai tajuk untuk keseluruhan tabel -->
+<table border="1">
+<caption >Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+<!-- HTML Table Tags
+Tag	           Description
+<table>	         Defines a table
+<th>	         Defines a header cell in a table
+<tr>	         Defines a row in a table
+<td>	         Defines a cell in a table
+<caption>	     Defines a table caption
+<colgroup>	     Specifies a group of one or more columns in a table for formatting
+<col>	         Specifies column properties for each column within a <colgroup> element
+<thead>	         Groups the header content in a table
+<tbody>	         Groups the body content in a table
+<tfoot>        	 Groups the footer content in a table
+ -->

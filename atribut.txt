@@ -1,0 +1,25 @@
+atribute umum form:
+         type = Menentukan jenis input yang akan digunakan
+         name: Memberikan nama pada elemen input ,untuk mengidentifikasi data yang dikirimkan dari form ketika form tersebut disubmit
+         value: Menentukan nilai awal atau default dari input.
+       placeholder: Menampilkan teks petunjuk di dalam input sebelum pengguna mengetikkan apa pun
+
+atribut advanced/kontrol input:
+        required: Membuat input menjadi wajib diisi. Jika tidak diisi, form tidak akan dapat disubmit.
+        disabled: Menonaktifkan input sehingga pengguna tidak dapat berinteraksi dengannya.
+        readonly: Membuat input hanya bisa dibaca, pengguna tidak dapat mengubah nilainya.
+        maxlength: Membatasi jumlah karakter yang dapat dimasukkan dalam input.
+        minlength: Membatasi jumlah karakter minimum yang harus dimasukkan.
+        size: Menentukan lebar visual dari input dalam karakter.
+        pattern: Menentukan ekspresi reguler untuk memvalidasi input.
+                Jika input tidak sesuai dengan ekspresi reguler, form tidak akan dapat disubmit
+         autofocus: Membuat input fokus otomatis ketika form dimuat.
+         list: Menentukan id dari elemen datalist yang terkait dengan input.
+         multiple: Membuat input dapat menerima lebih dari satu nilai
+
+Atribut Khusus untuk Jenis Input Tertentu:
+checked: Untuk checkbox dan radio button, atribut ini akan membuat opsi tersebut terpilih secara default.
+multiple: Untuk input type="file", memungkinkan pengguna memilih beberapa file sekaligus.
+min: Menentukan nilai minimum untuk input type="number", "date", dan jenis input terkait lainnya.
+max: Menentukan nilai maksimum untuk input type="number", "date", dan jenis input terkait lainnya.
+step: Menentukan kenaikan atau penurunan nilai untuk input type="number" dan "range".

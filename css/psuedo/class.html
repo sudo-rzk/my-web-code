@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/*Pseudo-class:"keadaan/kondisi" khusus yang dapat diberikan gaya pada elemen HTML 
+               tanpa perlu mengubah struktur HTML itu sendiri.  */
+/* membuat tooltip  */
+p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <div>Hover over this div element to show the p element
+        <p>Tada! Here I am!</p>
+      </div>
+</body>
+</html>
+<!-- Contoh Pseudo-class yang Sering Digunakan:
+
+:hover: Digunakan untuk menargetkan elemen saat mouse menunjuk ke atasnya.
+:active: Digunakan untuk menargetkan elemen saat sedang diklik.
+:visited: Digunakan untuk menargetkan link yang sudah pernah dikunjungi.
+:focus: Digunakan untuk menargetkan elemen yang sedang mendapatkan fokus (biasanya saat menggunakan keyboard).
+:first-child: Menargetkan elemen pertama dari sekelompok elemen yang sama.
+:last-child: Menargetkan elemen terakhir dari sekelompok elemen yang sama.
+:nth-child(n): Menargetkan elemen ke-n dari sekelompok elemen yang sama.
+
+Contoh Lain:
+
+Pseudo-class untuk form: :enabled, :disabled, :required, :optional
+Pseudo-class untuk tabel: :first-of-type, :last-of-type
+Pseudo-class untuk UI: :checked, :indeterminate
+Manfaat Menggunakan Pseudo-class:
+
+Membuat tampilan web lebih interaktif dan menarik.
+Meningkatkan pengalaman pengguna.
+Memudahkan penulisan CSS.-->

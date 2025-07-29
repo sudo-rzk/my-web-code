@@ -1,0 +1,190 @@
+
+CSS VALUE
+ - INTEGER:ANGKA BULAT DAN NEGATIF: 20 -20
+ - NUMBER : BISA PECAHAN:0.12
+ - PERCENT: PERSEN:10%
+ - DIMENSION: GABUNGAN DENGAN UNIT /memiliki satuan:20px 
+
+katwegory dimension:
+- lenght:
+    -lenght absolut(tak berubah)
+      - px,pt,pc,cm,mm,inc
+    -lenght relatif
+     - % ,em,rem,ch,vh,vw,vmin,vmax  
+- angle:sudut 
+       - degree(deg)
+       - gradiant(grad)
+       - radian(rad)
+       -  turn :putaran 
+- time
+   -s(second)
+   -ms(milisecond)
+
+- resolution
+
+
+
+
+Relatif dalam CSS
+
+Konsep "relatif" dalam CSS mengacu pada suatu nilai yang tidak memiliki ukuran absolut,
+ melainkan bergantung pada nilai lain, biasanya pada elemen induknya atau pada ukuran viewport (layar).
+  Ini berarti ukuran atau posisi suatu elemen tidaklah tetap, melainkan bisa berubah berdasarkan konteksnya.
+
+Apa itu Piksel (Pixel)?
+Piksel adalah satuan terkecil yang membentuk gambar digital pada layar.
+ Bayangkan layar komputer Anda sebagai kumpulan titik-titik kecil.
+Setiap titik kecil ini adalah satu piksel. Ukuran dan jumlah piksel pada layar akan menentukan resolusi layar tersebut.
+
+Cara Kerja Piksel dalam CSS
+Dalam CSS, piksel (disingkat px) digunakan untuk menentukan ukuran suatu elemen,
+seperti lebar, tinggi, margin, padding, dan lain-lain. Saat Anda memberikan nilai dalam piksel,
+ Anda secara langsung menentukan berapa banyak piksel yang akan digunakan untuk menampilkan elemen tersebut
+
+Kelebihan Menggunakan Piksel:
+Presisi: Anda dapat menentukan ukuran elemen dengan sangat tepat.
+Mudah dipahami: Konsep piksel relatif mudah dipahami, terutama bagi pemula.
+Dukungan luas: Hampir semua browser mendukung satuan piksel
+
+Kekurangan Menggunakan Piksel:
+Tidak Responsif: Ukuran elemen yang ditentukan dalam piksel akan tetap sama,
+ terlepas dari ukuran layar perangkat. Ini bisa menjadi masalah jika Anda ingin membuat desain yang responsif.
+Tergantung Resolusi: Ukuran fisik satu piksel bisa berbeda-beda antara satu perangkat dengan
+ perangkat lainnya. Ini berarti elemen yang terlihat bagus di satu layar, mungkin terlihat terlalu besar atau terlalu kecil di layar lain 
+
+Kapan Harus Menggunakan Piksel?
+Elemen yang ukurannya kritis: Jika ukuran elemen sangat penting dan harus tepat, piksel adalah pilihan yang tepat.
+Elemen yang tidak akan berubah ukurannya: Jika Anda yakin ukuran elemen tidak akan pernah berubah, Anda bisa menggunakan piksel
+
+
+Satuan Relatif:
+
+em: Mengacu pada ukuran font elemen induk.
+rem: Mengacu pada ukuran font akar (root) dokumen.
+%: Mengacu pada persentase dari ukuran elemen induk.
+vw: Mengacu pada lebar viewport.
+vh: Mengacu pada tinggi viewport.
+vmin: Mengacu pada nilai yang lebih kecil antara lebar dan tinggi viewport
+vmax: Mengacu pada nilai yang lebih besar antara lebar dan tinggi viewport
+ 
+Kekurangan Menggunakan Relatif:
+Kurang presisi: Nilai relatif tidak selalu dapat diprediksi dengan tepat
+Ketergantungan: Nilai relatif bergantung pada ukuran elemen induk
+
+
+(%) adalah satuan yang relatif. Artinya, ukuran yang ditentukan dalam persen akan bergantung pada
+ ukuran elemen induknya.
+
+Cara Kerja Persen dalam CSS
+
+Ketika Anda memberikan nilai dalam persen untuk suatu properti CSS, seperti width, height, atau
+ margin, ukuran elemen tersebut akan dihitung sebagai persentase dari ukuran elemen induknya
+
+ Kelebihan Menggunakan Persen:
+Responsif: Elemen yang menggunakan satuan persen akan secara otomatis menyesuaikan ukurannya ketika ukuran layar atau ukuran elemen induknya berubah. Ini sangat berguna untuk membuat desain yang responsif.
+Fleksibilitas: Anda dapat membuat layout yang lebih fleksibel dengan menggunakan persentase. Misalnya, Anda dapat membuat kolom dengan lebar yang sama tanpa perlu menghitung ukuran pikselnya secara manual.
+
+Kekurangan Menggunakan Persen:
+
+Tergantung pada elemen induk: Ukuran akhir suatu elemen akan bergantung pada ukuran elemen induknya. Jika ukuran elemen induk berubah, maka ukuran elemen anak juga akan berubah.
+Bisa menjadi kompleks: Dalam beberapa kasus, menggunakan terlalu banyak persentase dapat membuat struktur CSS menjadi lebih kompleks dan sulit untuk dipelihara.
+Kapan Harus Menggunakan Persen?
+Desain responsif: Persen sangat ideal untuk membuat desain yang dapat menyesuaikan diri dengan berbagai ukuran layar.
+Layout yang fleksibel: Jika Anda ingin membuat layout yang dapat berubah-ubah tergantung pada konten, persen adalah pilihan yang baik
+nilai height: auto pada suatu elemen, tinggi elemen tersebut akan secara otomatis disesuaikan dengan kontennya. Dalam kasus ini,
+            menggunakan persen untuk menentukan tinggi anak elemen mungkin tidak efektif 
+
+Satuan em dalam CSS
+Satuan em adalah satuan relatif yang didasarkan pada ukuran font elemen induknya.
+Ini berarti ukuran elemen yang ditentukan dalam em akan selalu bergantung pada ukuran font elemen induk terdekat 
+
+Kelebihan Menggunakan em:
+
+Fleksibilitas: Sangat baik untuk mengatur ukuran font dan jarak antar elemen berdasarkan skala font.
+Responsif: Ukuran elemen akan menyesuaikan diri jika ukuran font induk berubah.
+Hierarki: Memungkinkan Anda membuat hierarki ukuran font yang terorganisir.
+Kekurangan Menggunakan em:
+
+Ketergantungan pada induk: Jika Anda mengubah ukuran font elemen induk, semua elemen anak yang menggunakan em akan ikut berubah ukurannya.
+Bisa jadi kompleks: Dalam desain yang kompleks dengan banyak tingkat nested, perhitungan em bisa menjadi rumit.
+Kapan Harus Menggunakan em?
+
+Mengatur ukuran font: em sangat ideal untuk mengatur ukuran font secara relatif.
+Membuat desain yang skalabel: Jika Anda ingin membuat desain yang dapat dengan mudah disesuaikan ukurannya, em bisa menjadi pilihan yang baik.
+Menjaga konsistensi ukuran: Jika Anda ingin menjaga konsistensi ukuran font di seluruh dokumen, em dapat membantu Anda.\\\
+
+rem (root em)
+Definisi: Satuan rem mengacu pada ukuran font akar (root) dokumen. Biasanya, elemen <html> adalah elemen akar.
+Keuntungan:
+Skalabilitas global: Perubahan ukuran font pada elemen <html> akan memengaruhi semua elemen yang menggunakan satuan rem secara proporsional.
+Independensi dari hierarki: Tidak seperti em yang terikat pada induk terdekat, rem memberikan fleksibilitas yang lebih besar dalam mengatur ukuran font.
+
+Contoh:
+CSS
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1.2rem; /* Akan menjadi 19.2px sama perkalian perhitungannya*/
+}
+Gunakan kode dengan hati-hati.
+
+vw (viewport width) dan vh (viewport height)
+Definisi: vw mengacu pada lebar viewport (area yang terlihat di layar), sedangkan vh mengacu pada tinggi viewport.
+Keuntungan:
+Responsivitas: Sangat baik untuk membuat desain yang menyesuaikan diri dengan berbagai ukuran layar.
+Fleksibilitas: Memungkinkan Anda membuat layout yang bergantung pada ukuran layar.
+Contoh:
+CSS
+.element {
+    width: 50vw; /* Lebar elemen 50% dari lebar layar */
+    height: 25vh; /* Tinggi elemen 25% dari tinggi layar */
+}
+
+
+vmin dan vmax
+Definisi: vmin adalah nilai terkecil antara vw dan vh, sedangkan vmax adalah nilai terbesar antara vw dan vh.
+Keuntungan:
+Fleksibilitas: Memungkinkan Anda membuat desain yang menyesuaikan diri dengan dimensi terkecil atau terbesar dari viewport.
+Contoh:
+CSS
+.square {
+    width: 100vmin;
+    height: 100vmin;
+}
+Gunakan kode dengan hati-hati.
+
+Elemen .square akan selalu berbentuk persegi dengan sisi yang sama dengan dimensi terkecil antara lebar dan tinggi layar.
+Tabel Perbandingan:
+
+Satuan	Deskripsi	Keuntungan	Penggunaan Umum
+em	Relatif terhadap font induk/container Fleksibel untuk hierarki font	Mengatur ukuran font dalam elemen
+rem	Relatif terhadap font akar	Skalabilitas global, independensi hierarki	Mengatur ukuran font secara konsisten
+%	Relatif terhadap elemen induk	Responsif, fleksibel	Mengatur ukuran relatif terhadap elemen induk
+vw	Relatif terhadap lebar viewport	Responsif berdasarkan lebar layar	Membuat layout yang bergantung pada lebar layar
+vh	Relatif terhadap tinggi viewport	Responsif berdasarkan tinggi layar	Membuat layout yang bergantung pada tinggi layar
+vmin	Nilai terkecil antara vw dan vh	Responsif berdasarkan dimensi terkecil	Membuat desain yang menyesuaikan dengan layar kecil
+vmax	Nilai terbesar antara vw dan vh	Responsif berdasarkan dimensi terbesar	Membuat desain yang menyesuaikan dengan layar besar
+
+vw (viewport width) dan vh (viewport height)
+Definisi: vw mengacu pada lebar viewport (area yang terlihat di layar), sedangkan vh mengacu pada tinggi viewport.
+Keuntungan:
+Responsivitas: Sangat baik untuk membuat desain yang menyesuaikan diri dengan berbagai ukuran layar.
+Fleksibilitas: Memungkinkan Anda membuat layout yang bergantung pada ukuran layar.
+vmin dan vmax
+Definisi: vmin adalah nilai terkecil antara vw dan vh, sedangkan vmax adalah nilai terbesar antara vw dan vh.
+Keuntungan:
+Fleksibilitas: Memungkinkan Anda membuat desain yang menyesuaikan diri dengan dimensi terkecil atau terbesar dari viewport.
+Kapan Menggunakan Satuan Apa?
+
+rem: Ideal untuk mengatur ukuran font secara konsisten di seluruh halaman.
+vw, vh, vmin, vmax: Sangat berguna untuk membuat desain yang responsif dan menyesuaikan diri dengan berbagai ukuran layar.
+%: Fleksibel untuk mengatur ukuran relatif terhadap elemen induk.
+
+
+Unit Mana yang Harus Dipelajari?
+Untuk pemula: Pixel (px) dan persentase (%) adalah dua unit yang paling dasar dan mudah dipahami.
+Untuk desain responsif: Kuasai em, rem, vw, dan vh.
+Untuk tipografi: Pahami em dan rem untuk mengatur ukuran font secara efektif.
+Untuk layout yang lebih kompleks: Pelajari ch untuk kontrol yang lebih presisi terhadap jarak antar karakter.

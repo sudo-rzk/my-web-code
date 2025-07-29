@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iot webdev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="layout">
+      <nav class="navbar">
+        <h2>IOT Labs</h2>
+      </nav>
+
+       <!-- CONTAINER UTAMA  -->
+       <section class="main-container">
+        <!-- CONTAINER LED -->
+      <section class="led-container">
+        <!-- LED 1 -->
+        <div class="item-led">
+          <img src="led-off.png" class="led-img" id="tamuledimg">
+          <span class="led-locaton-txt">Tamu</span>
+          <button class="led-btn" id="led_tamu" onclick="setTamuLed()">TURN ON</button>
+        </div>
+        <!-- LED 2 -->
+        <div class="item-led">
+          <img src="led-off.png" class="led-img">
+          <span class="led-locaton-txt">Kamar</span>
+          <button class="led-btn" id="led-kamar" onclick="setKamarLed()">TURN ON</button>
+        </div>
+        <!-- LED 3 -->
+        <div class="item-led">
+          <img src="led-off.png" class="led-img">
+          <span class="led-locaton-txt">Dapur</span>
+          <button class="led-btn" id="led-dapur" onclick="setDapurLed()">TURN ON</button>
+        </div>
+        <!-- LED 4 -->
+        <div class="item-led">
+          <img src="led-off.png" class="led-img">
+          <span class="led-locaton-txt">Garasi</span>
+          <button class="led-btn" onclick="location.href='led.html'">TURN ON</button>
+        </div>
+      </section>
+       </section>
+        <section class="bottombar">
+          <ul>
+            <li><a href="/"><i class="fa-solid fa-home"></i></a></li>
+            <li><a href="led.html"><i class="fa-solid fa-lightbulb"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-fan"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+          </ul>
+        </section>
+     
+    </div>
+
+   <script src="main.js"></script>
+</body>
+</html>

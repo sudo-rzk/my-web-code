@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>txt decoration</title>
+    <style>
+/* text-decoration:digunakan untuk menambahkan hiasan atau dekorasi pada teks, 
+                    seperti garis bawah, garis atas, atau coretan
+text-decoration-line:Menentukan jenis garis dekorasi yang akan ditambahkan pada teks.
+text-decoration-color:Menentukan warna dari garis dekorasi. 
+text-decoration-style:Menentukan gaya garis dekorasi (solid, dotted, dashed, double, wavy).
+Nilai-nilai yang umum:
+solid: Garis penuh.
+dotted: Garis putus-putus dengan titik.
+dashed: Garis putus-putus dengan garis pendek.
+double: Garis ganda.
+wavy: Garis bergelombang
+
+text-decoration-thickness:Menentukan ketebalan garis dekorasi.
+Nilai: Dapat berupa nilai numerik (misalnya, 2px) atau kata kunci (thin, medium, thick). 
+
+Kapan Menggunakan text-decoration?
+Menandai teks penting: Misalnya, menandai kata kunci dalam sebuah artikel.
+Menunjukkan link: Garis bawah pada link adalah konvensi yang umum.
+Menyoroti teks yang telah dihapus: Menggunakan line-through.
+Memberikan efek visual: Menggabungkan berbagai nilai untuk menciptakan efek yang menarik.              */
+h1 {
+    /* overline: Menambahkan garis atas pada teks. */
+  text-decoration: overline;
+  text-decoration-color: blue
+}
+
+h2 {
+    /* line-through: Menambahkan garis melalui teks. */
+  text-decoration: line-through;
+  text-decoration-style: wavy;
+}
+
+h3 {
+    /* underline: Menambahkan garis bawah pada teks. */
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+
+p.mix {
+    /* Menambahkan garis atas dan bawah pada teks none: Menghapus semua dekorasi */
+  text-decoration: overline underline;
+}
+    </style>
+</head>
+<body>
+    <h1>Overline text decoration</h1>
+<h2>Line-through text decoration</h2>
+<h3>Underline text decoration</h3>
+<p class="mix">Overline and underline text decoration.</p>
+
+<p><strong>Note:</strong> It is not recommended to underline text that is not a link, as this often confuses 
+the reader.</p>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font face css</title>
+    <style>
+/* @font-face adalah at-rule (aturan) dalam CSS yang memungkinkan Anda untuk mengimpor dan 
+          menggunakan font (jenis huruf) kustom pada halaman web Anda  */
+    @font-face {
+   font-family: 'myFirstFont'; /* declare nama font */
+    src: url('path/to/FirstFont.woff2') format('woff2'),
+       url('path/to/FirstFont.woff') format('woff'),
+       url('path/to/FirstFont.ttf') format('truetype');
+  font-weight: bold; 
+ }
+
+ h1.judul1{
+    font-family: 'myFirstFont',sans-serif; /*sans-serif:sebagai font fallback jika font kustom gagal dimuat */
+    font-size: large;
+    text-align: center;
+    color: darkgrey;
+
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins Bold'), 
+       url('poppins-bold.woff2') format('woff2'),
+       url('poppins-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('poppins-italic.woff2') format('woff2'),
+       url('poppins-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+.judul2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Akan menggunakan poppins-bold */
+}
+.judul3{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic; /* Akan menggunakan poppins-italic */
+}
+    </style>
+</head>
+<body>
+    <h1  class="judul1">The @font-face Rule</h1>
+
+<div>
+With CSS, websites can use fonts other than the pre-selected "web-safe" fonts.
+</div>
+<h1  class="judul2">The @font-face Rule</h1>
+<h1  class="judul3">The @font-face Rule</h1>
+</body>
+</html>

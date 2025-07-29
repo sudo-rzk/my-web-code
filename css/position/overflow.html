@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+/*overflow(luapan):mengontrol apa yang terjadi pada konten yang terlalu besar untuk dimuat dalam suatu area.  */
+.auto {
+/* auto: Browser akan secara otomatis menambahkan scrollbar jika konten melebihi batas. */
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+  background-color: darkcyan;
+  border: 1px solid black;
+}
+/* visible: (default) Konten yang melebihi batas akan ditampilkan di luar batas elemen.Ini bisa menyebabkan tampilan menjadi berantakan. */
+.visible{
+    width: 200px;
+    height: 65px;
+    background-color: chartreuse;
+    overflow: visible;
+    border: 2px solid black;
+}
+/* hidden: Konten yang melebihi batas akan dipotong dan tidak terlihat. */
+.hidden{
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.scroll{
+  background-color: hsl(106, 100%, 66%);
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  overflow: scroll;
+}
+.x-y{
+  background-color: hsl(190, 100%, 66%);
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  /* atur horizontal  */
+  overflow-x: hidden;
+  /* atur vertical */
+  overflow-y: scroll;
+
+
+}
+
+    </style>
+</head>
+<body>
+    <h2>auto</h2>
+    <div class="auto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <br>
+    <h2>visible(default)</h2>  
+      <div class="visible">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, neque. Eos exercitationem,</p>
+      </div>
+      <br>
+    <h2>hidden</h2>
+    <div class="hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum laudantium beatae, eos, porro ipsam repellendus reiciendis cupiditate ipsa quis rerum deleniti quae facere ducimus dicta sapiente voluptas quod officia!</p>
+    </div> 
+     <h2>scroll</h2>
+     <div class="scroll">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sunt sit cumque nobis beatae. Eveniet optio deserunt id voluptas velit tempore quos, deleniti nisi, at veniam, laboriosam omnis delectus ipsum.</p>
+     </div>
+     <h2>overflow x y</h2>
+     <div class="x-y">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aut rem animi facilis vitae officia esse et rerum ea quis. Culpa nisi consequuntur, eum nulla provident minima totam ipsa quod?</p>
+     </div>
+</body>
+</html>

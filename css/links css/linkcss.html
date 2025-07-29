@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css link</title>
+    <style>
+        a{color: crimson;}
+/*Link states: mengacu pada kondisi atau keadaan dari sebuah link  */        
+/* :link: Menargetkan semua link yang belum pernah dikunjungi. */
+        a.link1:link{color:red;
+            text-decoration: none;}
+        /* :visited: Menargetkan semua link yang sudah pernah dikunjungi. */
+        a.link1:visited{color:blue; text-decoration: none;}
+        /* :hover: Menargetkan link saat mouse menunjuk di atasnya. */
+        a.link1:hover{color: gray; 
+            text-decoration: underline;
+            background-color: rgba(255, 0, 179, 0.337);
+        }
+        /* :active: Menargetkan link saat sedang diklik. */
+        a.link1:active{color: cornflowerblue;}
+
+ /* link tampilan button */
+a#a1:link,a#a1:visited{
+    background-color: crimson;
+    color: azure;
+    padding: 14px 25px;
+    margin: 55px;
+    text-decoration: none;
+}
+a#a1:hover,a#a1:active{
+    background-color: rgba(51, 0, 255, 0.841);
+}
+/* button over warna */
+a#a2:link,a#a2:visited{
+    background-color:aliceblue;
+    color:green;
+    border: 4px solid navy;
+    margin: 5%;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+a#a2:hover{background-color: darkblue;}
+
+
+/* mouse over link style ala ala */
+a.one:link {color:#ff0000;}
+a.one:visited {color:#0000ff;}
+a.one:hover {color:#ffcc00;}
+
+a.two:link {color:#ff0000;}
+a.two:visited {color:#0000ff;}
+a.two:hover {font-size:200%;}
+
+a.three:link {color:#ff0000;}
+a.three:visited {color:#0000ff;}
+a.three:hover {background:#8066ffe6;}
+
+a.four:link {color:#ff0000;}
+a.four:visited {color:#0000ff;}
+a.four:hover {font-family:'Times New Roman';}
+
+a.five:link {color:#ff0000;text-decoration:none;}
+a.five:visited {color:#0000ff;text-decoration:none;}
+a.five:hover {text-decoration:underline;}
+    </style>
+</head>
+<body>
+    <h2>style link</h2>
+    <p><b><a href="https://www.w3schools.com/" target="_blank">This is a link</a></b></p>
+    <!-- <h2>link states</h2> -->
+    <p><a class="link1" href="https://www.instagram.com/">This is a link with states</a></p>
+
+    <p>link style tampilan mirip button</p>
+    <a id="a1" href="https://www.instagram.com/" target="_blank">anggap ini button tanpa js</a>
+
+    <p>link button over bewarna</p>
+    <a id="a2" href="https://www.microsoft.com/">over button</a>
+
+    <p>Mouse over the links and watch them change layout:</p>
+
+<p><b><a class="one" href="https://www.instagram.com/" target="_self">This link changes color</a></b></p>
+<p><b><a class="two" href="https://www.facebook.com/" target="_blank">This link changes font-size</a></b></p>
+<p><b><a class="three" href="https://www.tiktok.com/" target="_blank">This link changes background-color</a></b></p>
+<p><b><a class="four" href="https://www.wikipedia.com/" target="_blank">This link changes font-family</a></b></p>
+<p><b><a class="five" href="https://www.microsoft.com/" target="_blank">This link changes text-decoration</a></b></p>
+
+<h2>Mouse over the words to change the cursor.</h2>
+<span style="cursor:auto">auto</span><br>
+<span style="cursor:crosshair">crosshair</span><br>
+<span style="cursor:default">default</span><br>
+<span style="cursor:e-resize">e-resize</span><br>
+<span style="cursor:help">help</span><br>
+<span style="cursor:move">move</span><br>
+<span style="cursor:n-resize">n-resize</span><br>
+<span style="cursor:ne-resize">ne-resize</span><br>
+<span style="cursor:nw-resize">nw-resize</span><br>
+<span style="cursor:pointer">pointer</span><br>
+<span style="cursor:progress">progress</span><br>
+<span style="cursor:s-resize">s-resize</span><br>
+<span style="cursor:se-resize">se-resize</span><br>
+<span style="cursor:sw-resize">sw-resize</span><br>
+<span style="cursor:text">text</span><br>
+<span style="cursor:w-resize">w-resize</span><br>
+<span style="cursor:wait">wait</span><br>
+
+</body>
+</html>

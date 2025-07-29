@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>image</title>
+    </head>
+    <!-- width and height, yang menentukan lebar dan tinggi gambar (dalam piksel): -->
+    <!-- src = source(atribute):untuk menentukan sumber gambar
+       alt = alternate(atribute)-->
+    <body>
+        <h1>foto mahkluk aneh dan sulit dijelaskan</h1>
+
+        <img src="img/WIN_20240220_12_17_02_Pro.jpg"
+        height="250px" width="200px" alt="foto" title="mahkluk aneh dan sulit dijelaskan">
+
+        <p>dari foto diatas tidak jelas dari mana asalnya, tapi beberapa kali mahkluk ini berfoto dengan gaya yang aneh dan sulit dijelaskan</p>
+
+        <h1>Lorem ipsum</h1>
+        <h4> in line /tidak ada alignment</h4>
+        <p><img src="img/WIN_20240508_12_35_47_Pro.jpg" height="250px" width="200px"
+            alt="foto" title="mahkluk aneh dan sulit dijelaskan">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Optio sunt expedita nesciunt necessitatibus veniam dolorum odio esse ut, delectus ad
+            Natus distinctio voluptate delectus deserunt mollitia ex eius. Veniam, consequuntur.</p>
+        
+            <h1>Lorem ipsum</h1>
+            <h4> ada alignment</h4>
+            <!-- align -->
+            <p><img src="img/WIN_20240220_12_17_15_Pro.jpg" height="500px" width="500px"
+                alt="foto" title="mahkluk aneh dan sulit dijelaskan">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Optio sunt expedita nesciunt necessitatibus veniam dolorum odio esse ut, delectus ad
+                Natus distinctio voluptate delectus deserunt mollitia ex eius. Veniam, consequuntur.</p>  
+            <br>    
+            <h2>giv/animated</h2>  
+            <img src="giperrror.webp" height="180px" width="200px">
+            
+            <!-- img as a link = To use an image as a link, put the <img> tag inside the <a> tag:-->
+            <h2>img as a link</h2>
+            <p>click on the gif</p>
+                <a href="latihan3.html/page.html">
+                    <img src="com.webp" height="120px" width="180px"></a>
+            <!-- floating img -->
+            <h2>floating img</h2>
+            <p><b>float img right</b></p>
+            <p><img src="giperrror.webp" alt="error"
+                style="float: right;width:42px;height: 42px;">
+              indonesia emas kata-kata yang bagus untuk anak bangsa agar giat belajar walaupun 
+              banyak kebijakan yang membuat kita senyum
+            </p>
+
+            <!-- img maps
+             Ide dibalik peta gambar adalah Anda dapat melakukan tindakan yang berbeda-beda tergantung pada bagian gambar yang Anda klik.
+            Untuk membuat peta gambar, Anda memerlukan gambar, dan beberapa kode HTML yang menjelaskan area yang dapat diklik.
+            <map>untuk mendefinisikan peta gambar
+            <area>untuk menentukan area yang dapat diklik di peta gambar
+            atribut HTML usemap elemen <img>untuk memberi nama dan  menunjuk ke peta gambar
+  -->
+            <h2>img maps</h2>
+            <!-- foto -->
+            <img src="workplace.jpg" alt="workplace"  usemap="#workmap">
+
+            <map name="workmap">
+                <area shape="rect" coords="34,44,270,350" alt="laptop" href=" https://en.wikipedia.org/wiki/Computer">
+                <area shape="rect" coords="291,173,334,245" alt="pone" href="latihan3.html/contact.html" >
+                <area shape="circle" coords="337,300,44" alt="circle" href="latihan2 library.html/multiple page.html">
+            </map>
+            <img src="3Dimw3exmpl.jpg" alt="crossant" usemap="#crossantmap">
+            
+            <!-- datar -->
+             <h2>bangunan datar</h2>
+             <img src="object-datar.jpeg" alt="datar" usemap="#datarmap">
+             <map name="datarmap">
+                <area shape="rect" coords="34,20,63,49" alt="rect" href="batman-dark-knight-joker-i116354.jpg">
+                <area shape="rect" coords="92,20,138,50" alt="rect2" href="suara dan musik.html">
+                <area shape="poly" coords="165,51,184,17,203,51" alt="tri" href="com.webp">
+                <area shape="poly" coords="227,51,241,21,282,21,269,51" alt="jajar" href="atributes.html">
+                <area shape="poly" coords="23,127,36,97,62,97,75,127" alt="trapesium" href="img/WIN_20240220_12_17_15_Pro.jpg">
+                <area shape="poly" coords="96,112,117,90,139,112,117,134" alt="ketupat" href="weee.jpg">
+                <area shape="circle" coords="185,117,67" alt="circle" href="img/WIN_20240220_12_17_02_Pro.jpg">
+                <area shape="poly" coords="246,131,238,106,259,92,279,106,272,131" alt="pentagon" href="actually viliian-in world-map.webp">  
+            </map>
+                
+<!-- picture:container/parent berisi satu atau lebih elemen source yang masing-masing menentukan satu sumber gambar
+             source 1 yg akan display jika kondisi mendukung semua   -->
+ <h2>picture</h2>
+ <picture>
+    <source srcset="layout 30w, object-datar 800w">
+    <source srcset="giperrror.webp 100w" >
+<!--media: Media query bekerja sama dengan srcset untuk memilih gambar yang paling sesuai
+          berdasarkan ukuran layar, orientasi, dan karakteristik perangkat lainnya
+    (orientation: portrait): memuat jika layar mode potrait  -->
+    <img src="image.jpg" media="(orientation: portrait)">
+
+ </picture>
+
+            
+
+    </body>
+</html>
+
+<!-- Common Image Formats
+Here are the most common image file types, which are supported in all browsers (Chrome, Edge, Firefox, Safari, Opera):
+
+Abbreviation	File Format	File             Extension
+APNG	Animated Portable Network Graphics	  .apng
+GIF	      Graphics Interchange Format         .gif
+ICO	         Microsoft Icon	                  .ico, .cur
+JPEG	Joint Photographic Expert Group image .jpg, .jpeg, .jfif, .pjpeg, .pjp
+PNG	    Portable Network Graphics	          .png
+SVG	        Scalable Vector Graphics	      .svg -->

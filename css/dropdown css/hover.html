@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown hoverable</title>
+    <style>
+        .dropdown{
+            position: relative;
+            display: block;
+        }
+        .span{   
+            border: 2px solid hsla(271, 76%, 53%, 0.72);
+            background-color: rgba(137, 43, 226, 0.446);
+        }
+        
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: hsla(90, 100%, 50%, 0.205);
+            min-width: 160px;
+            box-shadow: 0px  8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the text below to open the dropdown content.</p>
+
+<div class="dropdown"> <!--container dropdown-->
+  <span class="span">Mouse over me</span>
+  <!-- Konten yang muncul saat hover. -->
+  <div class="dropdown-content">
+  <p>Hello World!</p>
+  </div>
+</div>
+</body>
+</html>

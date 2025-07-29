@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image styling</title>
+    <style>
+        #foto1 {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        #foto2{
+            border-radius: 15%;
+            max-width: 100%;
+            border: 2px solid #ddd;
+            /* beri jarak border dan foto */
+            padding: 5px;
+        }
+        #foto2:hover{
+            box-shadow: 0 0 2px 1px rgba(0,140, 186, 0.5);
+        }
+        #foto3{
+            max-width: 100%;
+            height: auto;
+        }
+        #foto4{
+            max-width: 100%;
+            opacity: 0.5;
+        }
+
+        #foto5{
+            /* max-width: 100%; */
+            /* center */
+            margin: auto;
+            /* karena margin auto tidak bisa block hanya inline
+              convert display :block */
+            display: block;
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Circled Image</h2>
+    <img src="https://www.w3schools.com/css/paris.jpg" alt="paris" id="foto1" width="300px" height="300px">
+    <h2>Thumbnail Image as Link</h2>
+    <a href="mas-anies-anies-baswedan.gif" target="_top">
+        <img src="mas-anies-anies-baswedan.gif" alt="mas manis" id="foto2">
+    </a>
+    <h2>Responsive Image</h2>
+    <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="foto" id="foto3">
+    <h2>Image Transparency</h2>
+    <img src="ganjar-ampun dije.gif" alt="ampun dije" id="foto4">
+    <h2>image centering</h2>
+    <img src="ganjar-wong-saya-suka-kok.gif" alt="suka" id="foto5">
+</body>
+</html>

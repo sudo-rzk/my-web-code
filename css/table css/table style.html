@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table style</title>
+    <style>
+        .tb1,.td1,.th1{
+            border: 2px solid black;
+            text-align: left;}
+        .tb1{   
+            border-collapse: collapse;
+            /* full  */
+            width: 100%;}        
+        /* posisi element didalam table */
+        .td1,.th1{padding: 15px;}
+
+.tb2{
+    border-collapse: collapse;
+    border-radius: 15%;
+    width: 50%;
+}
+.th2,.td2{
+    padding: 8px;
+    /* hanya bawah baris yang bewarna */
+    border-bottom: 2px solid hsla(0, 0%, 50%, 0.547);
+    text-align: center;
+}
+/* Dengan menerapkan hover pada tr, seluruh baris akan berubah tampilan */
+.tr2:hover{
+    border: solid red;
+}
+/* style border kolom genap */
+.tr2:nth-child(odd){
+    border-right: 1px solid #ddd ;
+    background-color:hsla(184, 100%, 41%, 0.904);
+}
+/*style border kolom ganjil  */
+.tr2:nth-child(even){
+    background-color: hsla(102, 100%, 90%, 0.824);
+}
+/* buat biar keren */
+.th2{background-color: forestgreen;}
+
+.tb3{
+    border-collapse: collapse;
+    width: 60%;
+    margin-left:3%;
+}
+.tb3,.th3{
+    text-align:left;
+    padding: 8px;
+}
+.tr3:nth-child(even){background-color:azure;}
+
+    </style>
+</head>
+<body>
+    <h2>padding</h2>
+    <table class="tb1">
+        <tr class="tr">
+            <th class="th1">no</th>
+            <th class="th1">product</th>
+            <th class="th1">price</th>
+        </tr>
+        <tr class="tr">
+            <td class="td1">1</td>
+            <td class="td1">laptop</td>    
+            <td class="td1">$200</td>
+        </tr>
+        <tr class="tr">
+            <td class="td1">2</td>
+            <td class="td1">router zte</td>
+            <td class="td1">$50</td>
+        </tr>
+    </table>
+    <br>
+    <h2>hover</h2>
+    <table class="tb2">
+        <tr class="tr2">
+            <th class="th2">no</th>
+            <th class="th2">product</th>
+            <th class="th2">price</th>
+        </tr>
+        <tr class="tr2">
+            <td class="td2">1</td>
+            <td class="td2">laptop</td>    
+            <td class="td2">$200</td>
+        </tr>
+        <tr class="tr2">
+            <td class="td2">2</td>
+            <td class="td2">router zte</td>
+            <td class="td2">$50</td>
+        </tr>
+        <tr class="tr2">
+            <td class="td2">3</td>
+            <td class="td2">switch </td>
+            <td class="td2">$100</td>
+        </tr>
+        <tr class="tr2">
+            <td class="td2">4</td>
+            <td class="td2">mikrotik router RB950Ui</td>
+            <td class="td2">$110</td>
+        </tr>
+    </table>
+    <br>
+    <h2>ben responsif </h2>
+    <div style="overflow-x: auto;">
+    <table class="tb3">
+        <tr class="tr3">
+          <th class="th3">First Name</th>
+          <th class="th3">Last Name</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+          <th class="th3">points</th>
+        </tr>
+        <tr class="tr3">
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+        </tr>
+        <tr class="tr3">
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+        </tr>
+        <tr class="tr3">
+          <td>Adam</td>
+          <td>Johnson</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

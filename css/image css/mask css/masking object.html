@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masking object</title>
+    <style>
+        /* mask css: teknik menyembunyikan elemen berdasarkan elemen mask
+           bagian elemen mask yang transparan akan memperlihatkan elemen
+           yang ia bungkus 
+           PROPERTI:
+            mask-image = menentukan elemen mask 
+                         url()untuk logo,gambar terserah
+                         gradien():linear,radial gitu gitulah
+            mask-mode =  menentukan mask diterapkan
+                        alpha(default) = transparan dari mask
+                        luminance = kecerahan mask
+            mask-repeat = repeat jika elemen mask lebih kecil dari elemen
+                        no-repeat 
+            mask-size = menentukan ukuran elemen mask   
+            mask-position = menentukan posisi awal elemen mask
+            mask-origin = menentukan border posisi
+            mask-clip = menentukan posisi clip(cut) area mask
+            mask-composite = menntukan  penggabungan layer mask 
+                                      */
+
+        body{
+            /* background-color:rgba(240, 248, 255, 0.872); */
+            background-color: black;
+        }
+        .mask1{
+            mask-image: url(cipratan\ .png);
+            /* max-width: 100%; */
+        }
+        
+        .mask2{
+            mask-image:linear-gradient(black, transparent);
+        }
+        
+        
+        .mask3 { 
+            -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+            mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 25%);
+            mask-position: left; }
+        
+        .mask4{
+            mask-image: url(noda\ tinta\ mask.png);
+            border: 10px dotted black;
+            padding: 35px;
+            mask-repeat: no-repeat;
+            mask-position:0%;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>mask layer</h2>
+    <div class="mask1">
+        <img src="https://www.w3schools.com/css/paris.jpg" alt="paris" width="600px" height="600px">
+     </div>
+     <h2>mask gradien</h2>
+     <div class="mask2">
+        <img src="https://www.w3schools.com/css/paris.jpg" alt="paris" width="600" height="400">
+     </div>
+     <h2>radial gradient circle</h2>
+     <div class="mask3">
+        <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="trii" width="600" height="400"  >
+     </div>
+     <div class="mask4">
+       
+        <img src="trii.jpg" alt="trii" width="600px" height="600px">
+        
+     </div>
+</body>
+</html>

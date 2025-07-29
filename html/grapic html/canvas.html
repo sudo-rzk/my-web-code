@@ -1,0 +1,47 @@
+<!-- Elemen <div> (singkatan dari "division") 
+  <div> digunakan untuk mengelompokkan dan mengatur konten dalam sebuah halaman web -->
+
+
+<!-- Canvas HTML: Pengertian dan Kegunaannya
+Canvas HTML adalah elemen HTML5 yang menyediakan area kosong di mana Anda dapat menggambar grafik
+ dua dimensi menggunakan JavaScript. Bayangkan seperti kanvas kosong yang siap untuk Anda lukis dengan kode. 
+ * untuk drawing diperlukan javascript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>canvas</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <canvas id="Canvas" width="200" height="100"></canvas>
+        <script>
+            var myCanvas = document.getElementById("Canvas");
+            var ctx = myCanvas.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+        </script>
+        <p>Image to use:</p>
+        <img id="scream" src="giperrror.webp" alt="error code" width="220" height="277">
+        
+        <p>Canvas to fill:</p>
+        <canvas id="myCanvas" width="250" height="300"
+        style="border:5px solid black;">
+        Your browser does not support the HTML canvas tag.</canvas>
+        
+        <p><button onclick="myCanvas()">Try it</button></p>
+        
+        <script>
+        function myCanvas() {
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+          var img = document.getElementById("error code");
+          ctx.drawImage(img,10,10);
+        }
+        </script>
+        
+</body>
+</html>    

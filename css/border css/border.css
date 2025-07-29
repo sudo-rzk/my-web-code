@@ -1,0 +1,90 @@
+/* Border CSS adalah properti yang digunakan untuk menambahkan garis batas pada suatu elemen HTML 
+Jenis Border yang Sering Digunakan
+Border solid: Merupakan jenis border yang paling umum digunakan karena memberikan tampilan yang bersih dan jelas.
+Border dashed: Sering digunakan untuk memisahkan bagian-bagian konten atau memberikan efek visual yang lebih ringan.
+Border rounded: Kombinasi antara border dan border-radius untuk membuat sudut-sudut elemen menjadi bulat*/
+
+/* dotted: Garis titik-titik */
+p.dotted {border-style: dotted;}
+/* dashed: Garis putus-putus */
+p.dashed {border-style: dashed;}
+/* solid: Garis penuh tebel padat*/
+p.solid {border-style: solid;}
+/* double: Garis ganda */
+p.double {border-style: double;}
+/* groove: Garis dalam */
+p.groove {border-style: groove;}
+/* ridge: Garis luar */
+p.ridge {border-style: ridge;}
+/* inset: Garis dalam */
+p.inset {border-style: inset;}
+/* outset: Garis luar */
+p.outset {border-style: outset;}
+/* none: tidak ada */
+p.none {border-style: none;}
+/* hidden: tersembunyi ,biasanya untuk hover,layout kompleks,effect shadow */
+p.hidden {border-style: hidden;}
+/*campuran  */
+p.mix {border-style: dotted dashed solid double;}
+/*border-width: Mengatur ketebalan garis batas. Nilai yang umum digunakan 
+adalah thin, medium, thick, atau nilai numerik dalam satuan seperti px, em, atau rem.  */
+#thick{border-style:solid;
+       border-width: thick;} /*thick: border yang tebal*/
+#medium{ border-style: solid;
+         border-width: medium;} /*medium:border ketebalan sedang.*/
+#thin{ border-style: double;
+       border-width: thin;} /*thin: border yang sangat tipis*/
+/* nilai 4: 25px top, 10px right, 4px bottom and 35px left */
+#numeric{border-style: solid;
+         border-width: 2px 5px;} /* 2px top and bottom, 5px on the sides */
+#mix{border-style: groove;
+     border-width: medium 2px;
+}         
+/*border-color: Mengatur warna garis batas. Nilai: warna,rgb,rgba,hex */
+.color{border-style: double;
+    border-width: 5px;
+    border-color: blue;}
+/* red top, green right, blue bottom and yellow left */
+/* hsl yo enek: border-color: hsl(0, 100%, 50%); */
+.rgb{border-style:solid;
+     border-width: 5px;
+     border-color: rgb(red,0.27,0);}
+.rgba{border-style:solid;
+      border-color: rgba(red,0,0.2,0.2);}
+.hex{border-style: solid;
+    border: color #000;}
+.mixcolor{
+       /* ada 4: blue top, yellow right, purple bottom and rebecapurple left */ 
+       border-style: solid;
+       border-color: blue yellow purple rebeccapurple;
+}
+/* individual style border */
+/* Four values */
+p.four {border-style: dotted solid double dashed;}
+/* Three values */
+p.three {border-style: dotted solid double;}
+/* Two values */
+p.two {border-style: dotted solid;}
+/* One value */
+p.one {border-style: dotted;}
+/* spesific:bisa pada style,color,radius,width,shorthand(border-left:6px solid red) */
+.spesific{
+       border-top-style: dashed;
+       border-bottom-style: double;
+       border-left-style: groove;
+       border-right-style: outset;}
+.individual{
+       /* border: 5 px red solid;  border biasa*/ 
+       border-left: 6px red solid; /*individu border hanya kiri saja*/
+}
+.radius{
+       /* nilai:px,em,% Semakin besar nilainya, semakin melengkung sudutnya. */
+       border: 4px blue solid;
+       border-radius: 10px; /*semua sudut 10px*/
+       /* border-radius: 15px 5px 30px 5px; Atas-kiri 15px, atas-kanan 5px, bawah-kiri 30px, bawah-kanan 5px */
+       /* Contoh Penggunaan dalam Praktik
+Tombol: Membuat tombol dengan sudut membulat agar terlihat lebih menarik.
+Card: Memberikan efek rounded corners pada card untuk tampilan yang lebih modern.
+Avatar: Membuat gambar profil menjadi bulat.
+Header: Membuat header dengan sudut yang sedikit melengkung untuk memberikan kesan yang lebih lembut. */
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONIC Gradient</title>
+    <style>
+        /* conic gradient:transisi warna dalam bentuk lingkaran penuh, seperti irisan kue
+ Syntax:
+background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+By default, angle is 0deg and position is center. */
+     .conic1 {
+        width: 200px;
+        height: 200px;
+        background-image: conic-gradient(black,blue,red,yellow,cyan);
+     }
+     .conic2{
+        width: 200px;
+        height: 200px;
+        /* masing-masing berbagi sudut,degree paling besar akan mendapat ruang banyak */
+        background-image: conic-gradient(black 45deg,yellow 90deg,red 35deg,blue 180deg);
+     }
+     .conic3{
+        width: 200px;
+        height: 200px;
+        background-image: conic-gradient(black,cyan,red 200deg,crimson,lightblue );
+        border-radius: 50%;
+     }
+     .conic4{
+        width: 200px;
+        height: 200px;
+        /* from: Menentukan sudut awal gradien
+            at: Menentukan titik pusat gradien */
+        background-image: conic-gradient(from 90deg at center,red,black,blue,cyan);
+     }
+     .conic5{
+        width: 200px;
+        height: 200px;
+        background-image: conic-gradient(from 180deg at bottom,crimson,black 80deg,lightgreen 40deg,cyan);
+        border-radius: 50%;
+     }
+     .conic6{
+      height: 200px;
+      width: 200px;
+      background-color: red; /* For browsers that do not support gradients */
+   /* setiap warna dimulai dan berakhir pada sudut yang sama
+   contoh:
+   red 0deg(jam 3), red 90deg(jam 12): Ini berarti warna merah dimulai pada 0 derajat dan berakhir pada 90 derajat, tidak ada transisi warna
+   yellow 90deg: Warna kuning dimulai pada sudut 90 derajat.
+   yellow 180deg: Warna kuning berakhir pada sudut 180 derajat (arah jam 6).
+   green 180deg: Warna hijau dimulai pada sudut 180 derajat.
+   green 270deg: Warna hijau berakhir pada sudut 270 derajat (arah jam 9).
+   blue 270deg: Warna biru dimulai pada sudut 270 derajat dan berakhir pada sudut 360 derajat (kembali ke titik awal). */
+      background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+     }
+     .conic7{
+      height: 200px;
+      width: 200px;
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+      /* warna memakai transisi: memberikan rentang yang berbeda untuk setiap warna. */
+      /* background-image: conic-gradient(red 0deg, yellow 90deg, green 180deg, blue 270deg); */
+      border-radius: 50%;
+     }
+     .conic8{
+      height: 200px;
+      width: 200px;
+      background-image: repeating-conic-gradient(at right, black 20%,blue 40%);
+     }
+     .conic9{
+      height: 200px;
+      width: 200px;
+      /* 90deg: dimulai arah jam 3 */
+      background-image: repeating-conic-gradient(from 90deg at center, black 90deg,black 20%,blue 40%);
+      border-radius: 50%;
+     }
+    </style>
+</head>
+<body>
+    <h2>Conic Gradient - Colors</h2>
+    <div class="conic1"></div>
+    <h2>corner gradient - colors degree</h2>
+    <div class="conic2"></div>
+    <h2>corner gradient - radius color degree</h2>
+    <div class="conic3"></div>
+    <h2>corner gradient - parameter form at</h2>
+    <div class="conic4"></div>
+    <h2>corner gradient - parameter form at radius</h2>
+    <div class="conic5"></div>
+    <h2>corner gradient - color absolute </h2>
+    <div class="conic6"></div>
+    <h2>corner gradient - color absolute radius</h2>
+    <div class="conic7"></div>
+    <h2>Repeating a Conic Gradient</h2>
+    <div class="conic8"></div>
+    <h2>Repeating a Conic Gradient radius</h2>
+    <div class="conic9"></div>
+</body>
+</html>

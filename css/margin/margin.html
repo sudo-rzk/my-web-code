@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <style>
+         section p{margin-top:20px;} /*contoh px memberikan jarak 20 piksel di atas setiap paragraf  */
+         /*p jarak ke kiri 15*2 = 30px   */
+         .container1{font-size: 15px;}
+         .container1 p{margin-left: 2em;} 
+          /*  memberikan margin 16px (1rem) di semua sisi elemen dengan class "container2" */
+          html{font-size: 16px;}
+          .container2{border-style: solid;
+                      border-color: darkblue;
+                      margin: 1rem;
+                      width: 80%;
+                      margin-right: 5%;}
+            /* membuat elemen dengan class "center" berada di tengah secara horizontal  */
+          .container3{border: 2px solid crimson;
+                      margin:  0 auto; /*0 sama dgn auto,jika angka lain margin tidak bekerja*/
+                      width: 38%;
+          }
+          /* induk yg akan mewarisi nilai inherit */
+          .container4{border: 1px solid green;
+                      margin-left:60%;
+          }
+          /* inherit= akan ikut nilai dri induk cocok untuk mengurangi penggunaan css 
+          jika element dgn gaya serupa */
+          .container4 p{margin-left: inherit;}            
+          /* shorthand */
+          section{border-radius: 8px;
+                  /* margin: 25px 50px 75px 100px;
+                       top margin is 25px
+                      right margin is 50px
+                     bottom margin is 75px
+                     left margin is 100px */
+              margin: 25px 50px 75px 100px;
+          }
+/* margin collapse(runtuhya margin):Browser berusaha untuk menyederhanakan tampilan halaman web 
+      dengan menggabungkan margin yang berdekatanmargin atas dan bawah dari dua elemen
+yang saling berdekatan (biasanya elemen blok akan bergabung atau "collapse" menjadi satu margin
+          disini 0 kanan kiri 0 dan atas bawah 20+10 =collapse pioritas nilai 
+          paling besar 20px                            */
+          h2{border:solid 2px red ;margin: 0 20; }
+          h1{border:solid 2px peru;margin: 0 10;}
+          /*
+          three value
+margin: 25px 50px 75px;
+top margin is 25px
+right and left margins are 50px
+bottom margin is 75px
+two value
+margin: 25px 50px;
+top and bottom margins are 25px
+right and left margins are 50px 
+one value 
+margin: 25px;
+all four margins are 25px*/
+          
+
+    </style>
+</head>
+<!-- margin dalam CSS adalah jarak kosong yang mengelilingi suatu elemen HTML
+Bayangkan elemen HTML sebagai sebuah kotak, 
+margin adalah ruang kosong di sekitar kotak tersebut. Dengan mengatur margin, 
+kita bisa mengatur jarak antara elemen satu dengan elemen lainnya
+fungsi margin: memberi ruang/jarak element sekitar,membuat layout
+Cara Menggunakan Margin
+Anda bisa mengatur margin pada elemen HTML menggunakan properti CSS seperti:
+
+margin-top: Mengatur margin bagian atas elemen.
+margin-right: Mengatur margin bagian kanan elemen.
+margin-bottom: Mengatur margin bagian bawah elemen.
+margin-left: Mengatur margin bagian kiri elemen.-->
+<body>
+  <section>
+    <p>kenyamanan yang terlalu nyaman justru adalah penderitaan</p>
+    <p>lebih baik ditakuti dari pada dicintai jika kamu tidak bisa melakukan keduanya</p>
+  </section> 
+  <div class="container1">
+    <h3>judul metamorphosis</h3>
+    <p>kafka seorang penulis dan filsuf yang bisa menulis isi hati nya kedalam sebuah tulisan</p>
+  </div>
+  <div class="container2">
+    <p>menemukan arti dari semua,tidak mengikuti apa yg kebanyakan orang lain lakukan</p>
+    <p>orang lain melakukan sesuatu dan pada akhirnya berujung kekecewaan </p>
+  </div> 
+  <div class="container3">
+    <p>menemukan arti dari semua,tidak mengikuti apa yg kebanyakan orang lain lakukan</p>
+    <p>orang lain melakukan sesuatu dan pada akhirnya berujung kekecewaan </p>
+  </div> 
+  <div class="container4">
+    <p>menemukan arti dari semua,tidak mengikuti apa yg kebanyakan orang lain lakukan</p>
+    <p>orang lain melakukan sesuatu dan pada akhirnya berujung kekecewaan </p>
+  </div>
+  <h2>collapse </h2>
+  <h1>collapse</h1>
+
+</body>
+</html>

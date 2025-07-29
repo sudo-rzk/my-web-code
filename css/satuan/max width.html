@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max width</title>
+    <style>
+        div.ex1{
+    /*max-width:untuk menetapkan lebar maksimum suatu elemen. 
+    Artinya, elemen tidak akan melebihi lebar yang ditentukan, 
+    tetapi bisa lebih kecil jika kontennya lebih sedikit. 
+    Properti ini sangat berguna untuk membuat layout yang responsif dan 
+    memastikan elemen tidak terlalu lebar pada layar yang lebih kecil.
+    
+    Kapan Menggunakan max-width ?
+Layout Responsif: Untuk membuat layout yang bisa menyesuaikan diri dengan berbagai ukuran layar.
+Gambar: Untuk mencegah gambar terlalu besar dan merusak layout.
+Container: Untuk membatasi lebar container utama agar konten tidak terlalu lebar.
+Elemen Teks: Untuk mencegah paragraf terlalu panjang dan sulit dibaca.*/
+            width: 500px;
+            border: 2px solid blue;
+        }
+        div.ex2{
+            max-width: 500px;
+            border: 2px solid hsl(247, 100%, 50%);
+        }
+        div.ex3{
+            /* Menetapkan lebar minimum untuk suatu elemen. */
+            min-width: 500px;
+            border: 2px solid teal;
+        }
+        div.ex4{
+            /*  Menetapkan tinggi maksimum untuk suatu elemen. */
+            max-height: 200px;
+            border: 2px solid purple;
+        }
+        /* Menetapkan tinggi minimum untuk suatu elemen.  */
+        div.ex5{
+            min-height: 500px;
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Max-width</h2>
+<div class="ex1">This div element has width: 500px;</div>
+<br>
+<div class="ex2">This div element has max-width: 500px;</div>
+<h2>CSS min-width</h2>
+<div class="ex3">This div element has width: 500px;</div>
+<br>
+<h2>CSS max-height</h2>
+<div class="ex4">This div element has max-width: 500px;</div>
+<br>
+<h2>css min-height</h2>
+<div class="ex5">This div element has width: 500px;</div>
+</body>
+</html>

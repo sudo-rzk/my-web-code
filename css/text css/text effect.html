@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text effect</title>
+    <style>
+        p.text1{
+    /* white-space: nowrap: Mencegah teks untuk berpindah ke baris baru */
+            white-space: nowrap;
+            width: 200px;
+            border: solid 1px black;
+            overflow: hidden;
+         /*text dipotong jika melebihi 200px  */
+            text-overflow: clip;
+        }
+        p.text2{
+            white-space: nowrap;
+            width: 200px;
+            border:solid 1px black;
+            overflow:hidden;
+            /* Menambahkan 3 titik (...) di akhir teks yang terpotong. */
+            text-overflow: ellipsis;
+            /* custom */
+            /* text-overflow: " ...selengkapnya"; */
+        }
+        p.text3{
+            white-space: nowrap;
+            width: 200px;
+            border:solid 1px black;
+            overflow: hidden;
+        }
+        p.text3:hover{
+            overflow: visible;
+        }
+
+        p.text4{
+            width: 200px;
+            border: solid 1px black;
+        }
+        p.text5{
+            width: 120px;
+            border: solid 1px black;
+        }
+
+        p.text6{
+            writing-mode: horizontal-tb;
+        }
+        span{
+            writing-mode: vertical-rl;
+        }
+        
+        
+        .container{
+            writing-mode: vertical-rl;
+            /* Memusatkan teks di dalam setiap paragraf. */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>text overflow </h2>
+<!--text-overflow:untuk menentukan bagaimana teks ditampilkan ketika melebihi batas wadah (container) 
+                  yang telah ditentukan  -->
+    <p class="text1">clip:<i>karena semua akan terdiam dan terlupakan</i></p>
+    <p class="text2">ellipsis:<i>dimana letak kenyamanan itu,katakan</i></p>
+    <p class="text3">visibel hover:<i>something in the way ,there is hidden in the dark</i> </p>
+    <p class="text3" style="text-overflow: ellipsis;">visibel hover:<i>something in the way ,there is hidden in the dark</i> </p>
+    <h2>The word-wrap Property and rule</h2>
+<!--word-wrap:memecah kata yang panjang ke baris berikutnya  -->
+    <p class="text4">no break word:This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line</p>
+    <p class="text4" style="word-wrap: break-word;">break word:This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line</p>
+    <p class="text5" style="word-break: keep-all;">kedamaian dimana setiap manusai saling memahami hanya angan-angan,hanya bisa berusaha,berserah dan berharap</p>
+    <p class="text5" style="word-break: break-all;">kedamaian dimana setiap manusai saling memahami hanya angan-angan,hanya bisa berusaha,berserah dan berharap</p>
+    <h2>CSS Writing Mode</h2>
+<!--writin mode:menentukan penulisan x,y rl  -->
+    <p class="text6">kau dengan prinsipmu aku dengan prinsipku,tidak ada yang bisa dipastikan kebenaran itu</p>
+    <p class="text7">tidak ada <span>benar</span> atau <span>salah</span> , hanya ada <span>sebab</span> dan <span>akibat</span></p>
+    <p class="text8" style="writing-mode: vertical-lr;">sayap icarus terbakar saat ia terbang menuju matahari </p>
+    <h2>Membuat Paragraf Vertikal Sejajar</h2>
+    <div class="container">
+        <p class="txt9">keadilan hanyalah angan-angan semata,apakah keadilan benar-benar ada atau kalah dengan ke egoisan</p>
+        <p class="txt9">kedamaian dimana setiap manusai saling memahami hanya angan-angan,hanya bisa berusaha,berserah dan berharap</p>
+        <p class="txt9">kiri kiri,teriakan saat baris,tapi jika memahami arti kiri dibilang antek PKI</p>
+        <p class="txt9">memberontak kepada pemerintah,tapi dibilang memberontak dan mengkhianati negara</p>
+    </div>
+</body>
+</html>

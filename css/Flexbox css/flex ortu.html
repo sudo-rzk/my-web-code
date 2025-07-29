@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex container</title>
+    <style>
+        .flex-container{
+            /* semua (child) dari .container akan disusun berderet secara horizontal (default-nya)*/
+            display:flex;
+            background-color: dodgerblue;
+        }
+
+        .flex-container >.item{
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 20px;
+            font-size: larger;
+            
+        }
+        
+        /* flex direction:menentukan arah */
+        .flex-direction{
+            /* buat container jadi horizontal */
+            display:inline-flex;
+            flex-direction: column-reverse;
+            background-color: darkcyan;
+        }
+        .flex-direction>.items{
+            background-color: aliceblue;
+            width: 100px;
+            text-align: center;
+            margin: 10px;
+            line-height: 75px;
+            font-size: larger;
+        }
+        /* flex wrap:menentukan menurunkan  elemen jika tidak cukup ruang */
+        .no-wrap{
+            display: flex;
+            /* default */
+            flex-wrap: nowrap;
+            background-color: darkgoldenrod;
+        }
+        .no-wrap>.itm{
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size: larger;
+            line-height: 75px;
+        }
+        .wrap{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: darkgreen;
+        }
+        .wrap>.itms{
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size: larger;
+            line-height: 75px  
+        }
+
+        /* justify content:posisi item horizontal */
+        .jstn{
+            display: flex;
+            justify-content:space-between;
+            background-color: darkcyan;
+        }
+        .jstn>.itm2{
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: larger;
+        }
+        /* align item:posisi item vertical */
+        .aln{
+            display: flex;
+            height: 200px;
+            align-items: baseline;
+            background-color: DodgerBlue;
+        }
+        .aln>.itm3{
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            font-size: larger;
+            text-align: center;
+            line-height: 75px;
+        }
+
+        .aln-baseline{
+            display: flex;
+            height: 200px;
+            align-items: baseline;
+            background-color: DodgerBlue;
+        }
+        .aln-baseline>.itm4{
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            font-size: larger;
+            text-align: center;
+            line-height: 75px;
+        }
+
+        .aln-content{
+            display: flex;
+            height: 200px;
+            align-content:space-between;
+            flex-wrap: wrap;
+            overflow: scroll;
+            background-color: mediumaquamarine;
+        }
+        .aln-content>.itm5{
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size: larger;
+            line-height: 75px;
+        }
+        .center{
+            display: flex;
+            height: 200px;
+            background-color: dodgerblue;
+            /* centering */
+            justify-content: center;
+            align-items: center;
+        }
+        .center>.itm6{
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            color: white;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create a Flex Container</h2>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <h2>flex direction</h2>
+    <div class="flex-direction">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+    </div>
+    <h2>no wrap</h2>
+    <div class="no-wrap">
+        <div class="itm">1</div>
+        <div class="itm">2</div>
+        <div class="itm">3</div>
+        <div class="itm">4</div>
+        <div class="itm">5</div>
+        <div class="itm">6</div>
+        <div class="itm">7</div>
+        <div class="itm">8</div>
+        <div class="itm">9</div>
+        <div class="itm">10</div>
+    </div>
+    <h2>flex wrap</h2>
+    <div class="wrap">
+        <div class="itms">1</div>
+        <div class="itms">2</div>
+        <div class="itms">3</div>
+        <div class="itms">4</div>
+        <div class="itms">5</div>
+        <div class="itms">6</div>
+        <div class="itms">7</div>
+        <div class="itms">8</div>
+        <div class="itms">9</div>
+        <div class="itms">10</div>
+    </div>
+    <h2>justify content</h2>
+    <div class="jstn">
+        <div class="itm2">1</div>
+        <div class="itm2">2</div>
+        <div class="itm2">3</div>
+    </div>
+    <h2>align-item</h2>
+    <div class="aln">
+        <div class="itm3">1</div>
+        <div class="itm3">2</div>
+        <div class="itm3">3</div>
+    </div>
+    <h2>align-item</h2>
+    <div class="aln-baseline">
+        <div class="itm4"><h1>1</h1></div>
+        <div class="itm4"><h6>2</h6></div>
+        <div class="itm4"><h3>3</h3></div>  
+        <div class="itm4"><small>4</small></div>
+    </div>  
+    <h2>align content</h2>
+    <div class="aln-content">
+        <div class="itm5">1</div>
+        <div class="itm5">2</div>
+        <div class="itm5">3</div>
+        <div class="itm5">4</div>
+        <div class="itm5">5</div>
+        <div class="itm5">6</div>
+        <div class="itm5">7</div>
+        <div class="itm5">8</div>
+        <div class="itm5">9</div>
+        <div class="itm5">10</div>
+</div>
+<h2>Perfect Centering</h2>
+<div class="center">
+    <div class="itm6"></div>
+</div>
+
+
+</body>
+</html>

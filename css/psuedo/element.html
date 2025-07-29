@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psuedo element</title>
+    <style>
+        .p1::first-line{
+            color: dodgerblue;
+            font-variant: small-caps;
+        }
+        .p2::first-letter{
+            font-size: 2em;
+            color: hsla(13, 100%, 50%, 0.6);
+            font-family: Franklin Gothic ;
+        }
+        .p3::before{
+            content: '🎮';
+        }
+        .p4::after{
+            content: '🎮';
+        }
+        ::marker { 
+       color: red;
+       font-size: 23px;
+       }
+       /* CSS properties can be applied to ::selection: color, background, cursor, and outline. */
+       ::selection{
+        background-color: deepskyblue;
+        color: ghostwhite;
+       }
+
+    </style>
+</head>
+<body>
+   <div>
+    <h2>first-line:Menargetkan baris pertama dari sebuah elemen.</h2>
+    <p class="p1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text.
+         Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, 
+         and more, and more, and more, and more.</p>
+    <h2>::first-letter: Menargetkan huruf pertama dari sebuah elemen</h2> 
+    <p class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Deserunt, praesentium voluptate ut soluta dignissimos laudantium 
+        quae, dolore consectetur dolorem adipisci cumque fugiat quasi 
+        tenetur ea. Ratione ut eveniet officiis voluptas!</p>    
+    <h2>::before: Menambahkan konten sebelum konten asli elemen.</h2> 
+    <p class="p3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Deserunt, praesentium voluptate ut soluta dignissimos laudantium 
+            quae, dolore consectetur dolorem adipisci cumque fugiat quasi 
+            tenetur ea. Ratione ut eveniet officiis voluptas!</p>  
+    <h2>::after: Menambahkan konten setelah konten asli elemen</h2> 
+    <p class="p4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Deserunt, praesentium voluptate ut soluta dignissimos laudantium 
+                    quae, dolore consectetur dolorem adipisci cumque fugiat quasi 
+                    tenetur ea. Ratione ut eveniet officiis voluptas!</p>
+    <h2>::marker: Menargetkan marker pada daftar (list).</h2>  
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+      
+      <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ol>
+     <h2>::selection: Menargetkan teks yang dipilih pengguna</h2>    
+     <p class="p5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Facilis assumenda rem vel sint atque fugit provident reiciendis 
+        voluptatem earum ducimus. Numquam minus illo repellat reiciendis 
+        cumque corrupti saepe laborum vitae.</p>                                 
+   </div> 
+</body>
+</html>

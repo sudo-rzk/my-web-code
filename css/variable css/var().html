@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var() function css</title>
+    <style>
+        /* var() = untuk membuat variabel berisi value properti dari selector
+         :root = deklarasi variabel global menampung var()yg ada di selector
+         var(--name)= deklarasi var local  
+         var(--name,(optional)value)*/
+         :root {
+            --warna: #000; /* deklarasi variabel global */
+            --warna2: #ffffffb2; /* deklarasi variabel global */
+            --warna3:cyan;
+            --var:15px; 
+            }
+        body{
+            /* just call var  */
+            background-color: var(--warna);
+        }    
+        h2{
+            border-bottom: 2px solid var(--warna3);
+        }
+        .container{
+            background-color: var(--warna2);
+            color: var(--warna);
+            padding: var(--var);
+
+        }
+        /* OVERRIDE = DECLARE VAR IN SELECTOR */
+        .btn{
+            --btn-color:green;
+            --btn-color2:#08ff;
+            color: var(--btn-color);
+            background-color:var(--btn-color2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Using the var() Function</h1>
+    <div class="container">
+        <h2>var function</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere corrupti dolorum, velit labore eos quos cum praesentium, necessitatibus fuga exercitationem quod quae libero vero cupiditate, atque animi unde saepe odio.
+          Earum maiores praesentium quia at? Temporibus veritatis nesciunt odit iusto sequi soluta, dicta corporis. Odio mollitia cum dolorum doloremque dicta ut cumque aspernatur facere, placeat minima nobis expedita nemo recusandae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis unde ipsum cupiditate ipsa eos in, vel iusto culpa fugiat reiciendis facere aperiam enim illum! Voluptatum dolorum eaque quis sit incidunt?</p>
+        <button class="btn">yes</button>
+        <button class="btn">no</button>  
+    </div>
+</body>
+</html>

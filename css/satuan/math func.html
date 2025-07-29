@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math func Css</title>
+    <style>
+        div.calc{
+/*Digunakan untuk melakukan perhitungan: +,-,*,/ 
+Sintaks: calc(expression) */
+            border: 2px solid black;
+            /* position: relative; */
+            background-color: dodgerblue;
+            padding: 5px;
+            width: calc(50% - 310px); /*lebar:100% -1000px*/
+            /* left: 50px; */
+        }
+        div.max-value{
+    /*Digunakan untuk menampilkan nilai maksimum: max()*/
+        border: 2px solid black;
+        background-color: darkcyan;
+        width: max(100px,40%);
+        }
+        div.min-value{
+        /*Digunakan untuk menampilkan nilai minimum: min()*/
+        border: 2px black solid;
+        background-color: darkorchid;
+        width: min(200px,50%);
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>math calc()</h2>
+    <div class="calc">
+        <p>manusia memiliki shadow didalam dirinya🎭</p>
+    </div>
+    <h2>math max()</h2>
+    <div class="max-value">
+        <p>tujuan madara mungkin masuk akal buat saat ini ,tetapi manusia tetap memiliki shadow </p>
+    </div>
+    <h2>math min()</h2>
+    <div class="min-value">
+        <p>kenapa ada saja yang mempersulit dan mengacaukan suasana yang nyaman ini</p>
+    </div>
+</body>
+</html>

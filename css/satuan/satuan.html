@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>satuan ukuran css</title>
+    <style>
+        h3{
+            width: 200px;
+            height: 100px;
+         /*  membuat sebuah h3 dengan lebar 200 piksel dan tinggi 100 piksel */
+        }
+        /* Elemen .container memiliki lebar 800 piksel.
+Elemen .child yang ada di dalam .container memiliki lebar 50% dari lebar .container, yaitu 400 piksel (50% dari 800px) */
+        .container {width: 800px;}
+        .child {width: 50%;}
+         p{font-size: 70%;} 
+      /*Jika elemen induk memiliki font-size: 16px dan elemen anak memiliki font-size: 2em,
+       maka ukuran font elemen anak akan menjadi 32px (karena 2 x 16px)  */
+        .parent {font-size: 16px; background-color: brown;}/*element induek,jika ada perubahan maka child juga berubah*/
+        #child1 {font-size: 2em; /* Akan menjadi 32px */}
+      /* Relatif terhadap font akar: <html> <body> */
+        html{font-size: 16px;} 
+        body{font-size: 3rem;background-color: indigo;} /*jadi 32px*/
+
+        #vwh{ width: 50vw; /* Lebar elemen 50% dari lebar layar */
+             height: 25vh; /* Tinggi elemen 25% dari tinggi layar */
+             width: 20vmin; width: 25vmax;} 
+
+  /*nilai properti width and height
+    auto- Ini adalah default. Browser menghitung tinggi dan lebar
+    length- Menentukan tinggi/lebar dalam px, cm, dll.
+    %- Menentukan tinggi/lebar dalam persen dari blok yang berisi
+    initial- Mengatur tinggi/lebar ke nilai defaultnya elemen 
+    akan memiliki ukuran awal yang sesuai dengan jenis elemen tersebut dan pengaturan browser.
+    inherit- Tinggi/lebar akan diwarisi dari nilai induknya  */
+       .container3{
+        /* memiliki lebar maksimal 50px. Jika jendela browser diperkecil, 
+        elemen tersebut akan tetap memiliki lebar maksimal 50 px dan akan berada 
+        di tengah halaman karena adanya margin: 0 auto;
+        fungsi:menyesuaikan dg ukuran layar,membatasi lebar agar tidak menggangu layout
+        max-width cocok dgn margin auto*/
+                 max-width:50px ;
+                 margin: auto ;
+                 background-color: blue;
+       }
+       img {
+        /* membuat gambar akan menyesuaikan ukurannya secara otomatis sesuai dengan ukuran asli gambar. */
+            width: auto;
+            height: auto;
+}
+    </style>
+</head>
+<body>
+  <h3>satuan px pixel</h3>  
+  <div class="container">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+     Eaque ad repellendus consectetur saepe id ratione nemo! Voluptatum reiciendis, at cupiditate incidunt dignissimos et deserunt libero cumque, blanditiis praesentium, nobis inventore
+     <br>
+    <div class="child">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+         Inventore nulla consectetur sed aspernatur tempora repudiandae, ratione dolorem officiis, sequi earum asperiores temporibus id minima saepe ducimus qui voluptatibus commodi ut.
+    </div>
+  </div>
+  <p>biasa jajal tanpa induk</p>
+
+  <div style="background-color:navy;"><!--elemen induk-->
+    <!-- elemen anak ada dua lah -->
+    <div style="width:50%; margin-left:20%; background-color:chartreuse;">
+      Width: 50%, Left margin: 20%
+    </div>
+    <div style="width:30%; margin-left:60%; background-color:pink;">
+      Width: 30%, Left margin: 60%
+    </div>
+  </div>
+  
+  <div class="parent">
+    <div id="child1">bayangkan situasi dimana semua tampak absurd dan cukup sulit di terima</div>
+    <div id="div1">sekarang tak perlu khawatir tentang apapun karena semua baik baik saja</div>
+  </div>
+  <div class="parent1" style="background-color: blue;font-size:20px;">
+    <div id="vwh">bayangkan situasi dimana semua tampak absurd dan cukup sulit di terima</div>
+    <div id="vminmax">sekarang tak perlu khawatir tentang apapun karena semua baik baik saja</div>
+  </div>
+  <div class="parent3">
+    <p>dunia tak pasti ini ,orang orang memilih hidup senyaman mungkin</p>
+  </div>
+  <div></div>
+</html>

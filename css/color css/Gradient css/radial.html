@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient radial css</title>
+    <style>
+    /*
+    Radial Gradient adalah jenis gradien yang menciptakan efek visual seperti 
+                   lingkaran konsentris yang memancar keluar dari titik pusat
+    Syntax
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);  */
+        .radial1{
+            height: 200px;
+            width: 400px;
+            background-image: radial-gradient(white,yellow,black);
+        }
+        .radial2{
+            height: 200px;
+            width: 400px;
+            background-image: radial-gradient(white 5%,yellow 10%,black 60%);
+        }
+        /* size:digunakan untuk menentukan bentuk dan ukuran area gradien 
+           at: digunakan untuk menentukan titik pusat gradien| top left, center right %
+        */
+        .radial3{
+            height: 200px;
+            width: 400px;
+            background-image: radial-gradient(ellipse,white,yellow,black);
+        }
+        .radial4{
+            height: 270px;
+            width: 400px;
+            background-image: radial-gradient(circle,white,yellow,black);
+        }
+        .radial5{
+            height: 200px;
+            width: 400px;
+            /* Gradien akan membentang hingga mencapai sisi terdekat dari elemen */
+            background-image: radial-gradient(closest-side at center , white,yellow 15%,black);
+            /* background-size: closest-side; */
+        }
+        .radial6{
+            height: 200px;
+            width: 400px;
+        /* Gradien akan membentang dari pusat elemen hingga mencapai sisi terjauh dari elemen tersebut, baik itu sisi kiri, kanan, atas, atau bawah. */
+            background-image: radial-gradient(circle at center,white,yellow 15%,black);
+            background-size: farthest-side;
+        }
+        .radial7{
+            height: 200px;
+            width: 400px;
+            background-image: radial-gradient(circle at center,white,yellow,black);
+        /*Gradien akan membentang dari pusat elemen hingga mencapai sudut terdekat dari elemen tersebut  */
+            background-size: closest-corner;
+        }
+        .radial8{
+            height: 200px;
+            width: 400px;
+        /* Gradien akan membentang dari pusat elemen hingga mencapai sudut terjauh dari elemen tersebut. */
+            background-image: radial-gradient(farthest-corner at 60% 55%, red, yellow, black);
+        }
+        .radial9{
+            height: 200px;
+            width: 400px;
+            background-image: radial-gradient(circle at center,red,yellow,black);
+        /* contain: Membuat gradien yang mengisi seluruh area konten elemen */
+            background-size: contain;
+        }
+        .radial10{
+          height: 200px;
+          width: 400px;
+          background-image: radial-gradient(circle at center,red,yellow,black); 
+        /*cover: Membuat gradien yang menutupi seluruh area elemen, bahkan jika itu berarti memotong bagian dari gambar  */
+          background-size: cover;
+        }
+        .radial11{
+            height: 200px;
+            width: 400px;  
+            background-image: repeating-radial-gradient( black,black 2%, purple 10%);
+            border-radius: 74%;
+        }
+    </style>
+</head>
+<body>
+    <h2>radial-default</h2>
+    <div class="radial1"></div>
+    <h2>Radial- Differently Spaced Color / presentase</h2>
+    <div class="radial2"></div>
+    <h2>radial-set shape ellipse</h2>
+    <div class="radial3"></div>
+    <h2>radial-set shape circle</h2>
+    <div class="radial4"></div>
+    <h2>radial-size keyword closets-side</h2>
+    <div class="radial5"></div>
+    <h2>radial-size keyword farthes-side</h2>
+    <div class="radial6"></div>
+    <h2>radial-size keyword closets-corner</h2>
+    <div class="radial7"></div>
+    <h2>radial-size keyword farthes-corner(default)</h2>
+    <div class="radial8"></div>
+    <h2>radial-size contain</h2>
+    <div class="radial9"></div>
+    <h2>radial-size cover</h2>
+    <div class="radial10"></div>
+    <h2>radial- repeat</h2>
+    <div class="radial11"></div>
+</body>
+</html>

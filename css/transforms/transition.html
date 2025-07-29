@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        /* transition:transisi elemen dgn durasi tertentu  */
+        .width{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            /* transisi vertical 2detik */
+            transition: width 2s;
+        }
+        .width:hover{
+            width: 500px;
+        }
+
+        .height{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            /* transisi horizontal 2detik */
+            transition: 2s;
+        }
+        .height:hover{
+            height: 500px;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            transition: 2s;
+        }
+        /* Speed Curve of the Transition */
+        #div1:hover{
+        /* specifies a transition effect with the same speed from start to end */
+            transition-timing-function: linear;
+            width: 500px;
+        }
+        #div2:hover{
+        /*  transition effect with a slow start, then fast, then end slowly  */
+            transition-timing-function: ease;
+            width: 500px;
+        }
+        #div3:hover{
+            /* transition effect with a slow start */
+            transition-timing-function: ease-in;
+            width: 500px;
+        }
+        #div4:hover{
+            /* transition effect with a slow end */
+            transition-timing-function: ease-out;
+            width: 500px;
+        }
+        #div5:hover{
+            /* transition effect with a slow start and end */
+            transition-timing-function: ease-in-out;
+            width: 500px;
+        }
+
+        div.delay-effect{
+            width: 200px;
+            height: 200px;
+            background: crimson;
+            transition: 3s;
+            /* 3 second delay before starting */
+            transition-delay: 3s;
+}
+       div.delay-effect:hover{
+        width: 500px;
+       }
+
+       div.transform{
+        width: 200px;
+        height: 200px;
+        background-color: crimson;
+        transition: 2s,2s,3s;
+       }
+       div.transform:hover{
+        width: 300px;
+        height: 300px;
+        transform: rotate(60deg) skew(-20deg) translateX(50px) translateY(10px);
+       
+       }
+       div.wh{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            transition: 2s;
+       }
+       div.wh:hover{
+        width: 300px;
+        height: 300px;
+
+       }
+    </style>
+</head>
+<body>
+    <h2>Transition width</h2>
+    <div class="width"></div>
+    <h2>Transition height</h2>
+    <div class="height"></div>
+    <h2>transition-timing-function</h2>
+    <div id="div1">linear</div><br>
+    <div id="div2">ease</div><br>
+    <div id="div3">ease-in</div><br>
+    <div id="div4">ease-out</div><br>
+    <div id="div5">ease-in-out</div><br>
+    
+    <h2>The transition-delay Effect</h2>
+    <div class="delay-effect"></div>
+    <h2>Transition + Transformation</h2>
+    <div class="transform"></div>
+    <h2>More Transition</h2>
+      <div class="wh"></div>
+    <h2></h2>
+    <h2></h2>
+</body>
+</html>

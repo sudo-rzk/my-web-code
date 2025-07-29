@@ -1,0 +1,157 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+* html{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: url("cursor.png"),auto;
+    font-family:"Titillium Web",sans-serif;
+
+
+}
+
+body{
+   cursor: url("cursor.png"),auto;
+   margin: 0;
+}
+.layout{
+    /* ukuran mobile */
+    max-width: 476px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    /* ukuran penuh kebawah */
+    height: 100vh;
+    border: 1px solid black;
+    position: relative;
+}
+
+.navbar{
+    background-color: rgb(0, 89, 254);
+    padding: 4px;
+    font-size: 10px;
+    text-align: center;    
+}
+.navbar h2{
+    color: white;
+    font-weight: 500;
+}
+
+
+
+
+.main-container{
+    margin-left:1em;
+    padding-bottom: 15px;
+}
+
+.main-container{ 
+     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* height: 100vh; */
+    overflow-y: scroll;
+    padding: 32px;
+} 
+
+.main-container{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+    align-items: center;
+    margin:15px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 4px 1px #1f1f1f;
+}
+
+.item-img{
+    width: 35%;
+}
+
+.item-btn,.led-btn{
+    background-color: rgb(0,89,255);
+    color: aliceblue;
+    width: 100%;
+    font-weight: bolder;
+    padding:  4px 8px;
+    border: none;
+}
+
+.led-btn:hover{
+     transition: all 1.4s ease-in-out;
+    cursor: url('icons8-hand-cursor.svg'),auto;
+}
+
+/* CONTAINER LED */
+.led-container{
+    display: flex;
+    /* width: 100%; */
+    flex-wrap: wrap;
+    padding-left: 2em;
+    /* align-content: center; */
+    /* flex-flow:row; */
+}
+
+.item-led{
+    display: flex;
+    flex-direction: column;
+    width: 36%;
+    gap: 16px;
+    padding: 8px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 4px 1px #1f1f1f;
+    margin: 16px;
+    
+
+ }
+
+.led-img{
+    width: 100px;
+    /* memastikan fit 100px */
+    object-fit: cover;
+}
+
+.led-loaction-txt{
+    font-weight: 700;
+    padding: 2px;
+}
+.bottombar{
+    position: absolute;
+    bottom: 0;
+    background-color:rgb(0, 89, 255) ;
+    left: 0;
+    width: 100%;
+}
+.bottombar ul{
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    padding: 8px;
+}
+.bottombar ul li{
+    flex: 1;
+    text-align: center;
+}
+.bottombar ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    font-size: x-large;
+}
+a:hover{
+    /* transition: all 1.4s ease-in-out; */
+    cursor: url('icons8-hand-cursor-48.png'),auto;
+}
+
+
+@media screen and (max-width:450px) {
+    /* CONTAINER LED */
+.led-container{
+    width: 100%;
+    padding-left: 2em;
+}
+}

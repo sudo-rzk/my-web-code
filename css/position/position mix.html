@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ATURAN MEMBUAT:PARENT RELATIVE DAN CHILD ABSOLUTE */
+        .card{
+            position: relative;
+            width: 300px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .card-img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 140px;
+        }
+        .card-content{
+            padding-left: 120px;
+        }
+    </style>
+
+        
+           
+</head>
+<body>
+    
+<!-- position: relative dan position: absolute
+Konsep: Elemen dengan position: absolute diposisikan relatif terhadap elemen induk terdekat yang memiliki position: relative.
+Contoh Penggunaan:
+Membuat tooltip: Elemen tooltip diposisikan secara absolut terhadap elemen yang memicunya.
+Membuat popup: Popup diposisikan secara absolut di tengah layar.
+Membuat overlay: Overlay diposisikan secara absolut untuk menutupi seluruh layar. -->
+        <!-- <button class="tooltip-btn">tooltip</button>
+        <span class="tooltip">ini tooltip</span> -->
+       
+<!-- position: fixed dan position: sticky
+Konsep: position: fixed membuat elemen tetap di posisi yang sama saat halaman digulir, sedangkan position: sticky adalah kombinasi antara relative dan fixed.
+Contoh Penggunaan:
+Navbar tetap: Navbar dengan position: fixed akan selalu berada di bagian atas layar saat pengguna menggulir.
+Sidebar yang menempel: Sidebar dengan position: sticky akan menempel di sisi layar saat pengguna menggulir melewati titik tertentu. 
+
+position: absolute dan z-index
+Konsep: z-index digunakan untuk mengatur tumpukan elemen yang memiliki posisi absolute atau fixed.
+Contoh Penggunaan:
+Modal: Modal (popup) biasanya diposisikan secara absolut dengan z-index yang tinggi agar berada di atas elemen lainnya.
+Tooltip: Tooltip diposisikan secara absolut dengan z-index yang lebih tinggi dari elemen yang memicunya.
+
+position: relative dan float
+Konsep: float digunakan untuk mengapungkan elemen ke kiri atau kanan, sedangkan position: relative digunakan untuk memposisikan elemen secara relatif terhadap posisi awalnya.
+Contoh Penggunaan:
+Layout sederhana: Mengapungkan gambar ke kiri dan teks ke kanan.
+Card layout: Membuat layout kartu dengan gambar di sebelah kiri dan teks di sebelah kanan.-->
+
+
+
+
+<div class="card">
+    <img src="starlink.jpg" alt="starlink" class="card-img">
+    <div class="card-content">
+        <h2>starlink</h2>
+        <p>satelit X elon musk</p>
+    </div>
+</div>
+</body>
+</html>

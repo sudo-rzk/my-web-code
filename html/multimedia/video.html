@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>video</title>
+    </head>
+
+    <body>
+        <h1>menampilkan video</h1>
+<!-- ATRIBUT:
+        src(source):Menentukan URL sumber video 
+        autoplay: Memulai pemutaran video secara otomatis saat halaman dimuat 
+        preload: Mengontrol bagaimana browser memuat video. Pilihannya:
+              none: Tidak memuat video sampai pengguna memulai pemutaran
+              metadata: Memuat hanya metadata video (durasi, dimensi)
+              auto: Memuat seluruh video
+        muted : putar video otomatis tanpa suara
+        loop:Mengulang pemutaran video secara terus-menerus 
+        poster:Menampilkan gambar statis/tumbnail sebelum video mulai diputar
+    ATRIBUT SPESIFIK:
+    width: Menentukan lebar video
+    height: Menentukan tinggi video
+    currentTime: Mengatur waktu saat video akan dimulai.
+    playbackRate: Mengatur kecepatan pemutaran video.
+    volume: Mengatur volume video 
+
+    ELEMENT:       
+    </controls> menambahkan kontrol video, seperti putar, jeda, dan volume
+    <source>memungkinkan Anda menentukan file video alternatif yang dapat dipilih oleh browser.
+     Browser akan menggunakan format pertama yang dikenal-->
+       
+        <video src="video/UNGU - Para PencariMu (with Lyric) _ VC Trinity.mp4" 
+               poster="img/WIN_20240220_12_17_15_Pro.jpg"
+               width="100%"
+               controls>
+        </video>
+        <p>lagu religi</p>
+            <video width="320" height="240" autoplay muted preload="auto">
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position css</title>
+    <style>
+        /* === BASIC POSITIONS === */
+        
+        /* Static:
+        - Nilai default untuk semua elemen HTML
+        - Mengikuti aliran normal dokumen
+        - Properti top, right, bottom, left tidak berpengaruh
+        - Tidak bisa digunakan sebagai referensi untuk elemen absolute */
+        div.static {
+            position: static;
+            border: 5px solid blueviolet;
+            background-color: hsla(0, 0%, 12%, 0.68);
+        }
+
+        /* Relative:
+        - Dapat digeser dari posisi normalnya dengan top, right, bottom, left
+        - Tetap mempertahankan ruang aslinya dalam dokumen
+        - Sering digunakan sebagai container untuk elemen absolute
+        - Cocok untuk pergeseran kecil dari posisi normal
+        
+        Kombinasi umum:
+        - Parent: relative + Child: absolute (untuk dropdown, tooltip)
+        - Parent: relative + Child: relative (untuk layout bertingkat) */
+        div.relative {
+            position: relative;
+            border: 4px solid red;
+            background-color: hsla(64, 100%, 50%, 0.768);
+            bottom: 13px;
+            left: 5%;
+        }
+
+        /* Absolute:
+        - Keluar dari aliran normal dokumen
+        - Posisi mengacu pada ancestor terdekat yang memiliki position
+        - Jika tidak ada ancestor dengan position, mengacu ke <html>
+        - Sangat bergantung pada parent yang memiliki position
+        
+        Kombinasi umum:
+        - Harus memiliki parent relative untuk positioning yang tepat
+        - Sering digunakan dalam:
+          * Dropdown menus
+          * Modal dialogs
+          * Tooltips
+          * Badge notifications */
+        div.absolute {
+            position: absolute;
+            border: 4px solid navy;
+            background-color: hsla(180, 100%, 50%, 0.554);
+            left: 20px;
+            top: 100%;
+        }
+
+        /* Fixed:
+        - Selalu mengacu pada viewport (layar browser)
+        - Tetap di posisinya saat scrolling
+        - Keluar dari aliran normal dokumen
+        
+        Kombinasi umum:
+        - Biasanya berdiri sendiri (tidak perlu parent khusus)
+        - Cocok untuk:
+          * Navigation bars
+          * Back to top buttons
+          * Cookie notices */
+        div.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 40px;
+            right: 0;
+            font-size: large;
+            background-color: hsla(180, 25%, 25%, 0.859);
+        }
+
+        /* Sticky:
+        - Hybrid antara relative dan fixed
+        - Bersifat relative sampai threshold scroll tercapai
+        - Setelah threshold, berubah menjadi fixed
+        - Tetap dalam container parent
+        
+        Kombinasi umum:
+        - Perlu container dengan height yang cukup
+        - Cocok untuk:
+          * Section headers
+          * Navigation tabs
+          * Sidebar yang mengikuti scroll */
+        div.sticky {
+            position: sticky;
+            bottom: 0;
+            width: 100vw;
+            height: 100px;
+            left: 100%;
+            font-size: large;
+            background-color: lightslategray;
+        }
+
+        /* === CONTOH KOMBINASI UMUM === */
+        
+        /* Contoh Dropdown Container */
+        .dropdown-container {
+            position: relative;    /* Parent */
+        }
+        .dropdown-menu {
+            position: absolute;    /* Child */
+            top: 100%;
+            left: 0;
+        }
+
+        /* Contoh Modal Dialog */
+        .modal-overlay {
+            position: fixed;       /* Full screen overlay */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .modal-content {
+            position: absolute;    /* Centered in overlay */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+<body>
+    <h2>tanpa position</h2>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+
+<h2>dengan position</h2>
+    <div class="static">static</div>
+    <div class="relative">realtive</div>  
+    <div class="absolute">absolute</div>
+    <div class="fixed">fixed</div>
+    <div class="sticky">sticky</div> 
+
+<!-- <div class="container">
+    <div class="relative1"></div>  
+    <div class="absolute1"></div>
+    <div class="fixed"></div>
+    <div class="sticky"></div> 
+</div>  -->
+    
+    
+</body>
+</html>

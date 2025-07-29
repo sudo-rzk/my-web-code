@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image shapes</title>
+    <style>
+        /* clip-path:properti bentuk dasar
+           circle(% | left, right, top, or bottom,%)
+           shape-outside:bentuk luar elemen | %
+           elipse:(x:% y:% |left, right, top, or bottom,%)
+           polygon: 1.h:horizontal center v:vertical atas 
+                    2. h:kanan v:center kanan
+                    3. h:center v:bawah
+                    4. h:kiri v:center kiri 
+
+
+
+           */
+           
+        .foto1{
+            width: 300px;
+            height: 300px;
+            max-width: max-content;
+            clip-path: circle(50%);
+
+        }
+        .foto2{
+            width: 300px;
+            height: 300px;
+            max-width: max-content;
+            clip-path: circle(50% at right);
+        }
+
+        .container1{
+            border: 2px solid mediumaquamarine;
+            padding: 10px;
+            max-width: 100%;
+            display: flow-root;
+            overflow: auto;
+        }
+        #foto3{
+            width: 200px;
+            height: 200px;
+            float: left;
+            font-family: monospace;
+            font-size: medium;
+            /* bentuk elemen */
+            clip-path: circle(45%);
+            /* bentuk luar elemen */
+            shape-outside: circle(45%);
+            margin: 10px;
+        
+        }
+        #foto4{
+            width: 200px;
+            height: 200px;
+            clip-path: ellipse(40% 50%);
+            background-color:crimson;
+        }
+        #foto5{
+            width: 200px;
+            height: 200px;
+            clip-path: ellipse(40% 30% at 50% 50%);
+            background-color: cadetblue;
+        }
+
+        #foto6{
+            width: 300px;
+            height:300px;
+            clip-path: polygon(60% 20%, 100% 20%, 50% 90%, 10% 50%);
+        }
+        #foto7{
+            width: 300px;
+            height: 300px;
+            /* tengah = 50% setengah , kanan = 100% max gambar,bawah = 100% max gambar
+               kiri = 0 %  */
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+    </style>
+</head>
+<body>
+    <h2>The circle() Function</h2>
+    <img src="ganjar-ampun dije.gif" alt="ampun dj" class="foto1">
+    <br>
+    <img src="ganjar-ampun dije.gif" alt="ampun separo" class="foto2">
+    <h2>shape-outside Property</h2>
+    <div class="container1">
+    <img src="LIGHTBOX wpu/tumb/abri red.jpeg" alt="abri" id="foto3">
+    <div class="clear"></div>
+    <p id="p1">inilah lambang mesin perang dan pembunuh dari segala pembunuh
+        pemegang senapan dan senjata yang bisa menghabisi siapa saja,senjata
+        patuh pada negara (pemerintah/pejabat yang tidak ingin ada kebisingan
+        maupun goncangan dan ingin berkuasa) cover nasionalisme,patriotisme
+        sangatlah licik dan munafik,mendoktrin manusia ini menjadi pembunuh 
+        dari segala pembunuh. dimedan perang membunuh satu sama lain demi 
+        membela negara yang padahal pemerintah nya yang punya masalah
+        mereka hanya sebagai tameng kekuasaan ,mesin perang ,dari sini
+        apakah cita cita menjadi (mesin perang) dengan cover nasionalisme
+        ini masih layak diraih ,bisa saja senapan yang mereka pegang untuk
+        membasmi teman,keluarga,manusia lain hanya untuk si idiot yang ada di kursi 
+        parlemen
+    </p>
+    </div>
+    <h2>The ellipse() Function</h2>
+    <img src="LIGHTBOX wpu/tumb/bed renjer.jpg" alt="renjer" id="foto4">
+    <br>
+    <img src="LIGHTBOX wpu/tumb/army Spetnaz.png" alt="Spetnaz" id="foto5">
+    <h2>The polygon() Function</h2>
+    <img src="trii.jpg" alt="trii" id="foto6">
+    <br>
+    <img src="tri2.jpg" alt="trii2" id="foto7">
+
+</body>
+</html>

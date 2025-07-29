@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2d transforms </title>
+    <style>
+/* Transformasi 2D:untuk memanipulasi elemen HTML dalam dua dimensi (sumbu X dan Y).
+
+translate(): Memindahkan elemen dari posisi aslinya
+    translate(x, y): Memindahkan elemen sejauh x piksel secara horizontal dan y piksel secara vertikal.
+    translateX(x): Memindahkan elemen sejauh x piksel secara horizontal.
+    translateY(y): Memindahkan elemen sejauh y piksel secara vertikal.
+    
+rotate(): Memutar elemen searah jarum jam
+rotate(angle): Memutar elemen sejauh angle derajat (-)kiri(+)kanan
+
+skew(): Memiringkan elemen.
+skew(x-angle, y-angle): Memiringkan elemen sejauh x-angle derajat pada sumbu X dan y-angle derajat pada sumbu Y.
+skewX(angle): Memiringkan elemen sejauh angle derajat pada sumbu X.
+skewY(angle): Memiringkan elemen sejauh angle derajat pada sumbu Y
+
+matrix(): Menggabungkan beberapa transformasi dalam satu fungsi 
+matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+
+ Kapan Menggunakan Transformasi 2D?
+
+Membuat efek hover yang menarik.
+Membuat animasi sederhana.
+Mengatur tata letak elemen dengan lebih fleksibel.
+Membuat efek visual yang unik  */
+        .div1{
+            width: 200px;
+            height: 100px;  
+            background-color: blueviolet;
+            border: 1px solid black;
+            transform: translate(100px,10px);
+        }
+        .div2{
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+        .div2:hover{
+            transform: translateX(100px);
+        }
+        .div3{
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+        .div3:hover{
+            transform: translateY(50px);
+        }
+        .div4{
+         width: 300px;
+        height: 100px;
+        background-color:blueviolet;
+        border: 1px solid black;
+        }
+        #myDiv{
+        width: 300px;
+        height: 100px;
+        background-color:blueviolet;
+        border: 1px solid black;
+            transform: rotate(20deg);
+        }
+        .div5{
+            margin: 150px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+            /* membesar 2 kali dan 3 kali lipat */
+            transform: scale(2,3);
+        }
+        .div6{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;}
+        .div6:hover{
+            /* decreases the size of an element */
+            transform: scale(0.5,0.5);}
+        
+        .div7{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;}
+        .div7:hover{
+            /* membesar 2 kali X:horizontal */
+            transform: scaleX(2);} 
+            
+        .div8{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+            transform: scaleY(0.1);
+        }
+        .div8:hover{
+            /* membesar 2 kali Y:vertical */
+            transform: scaleY(2);}
+            
+        .div9{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+            /* x:20deg y:10deg */
+            transform: skew(20deg,10deg);
+        }    
+        
+        .div10{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+        .div10:hover{
+            /* miring x:horizontal -20deg */
+            transform: skewX(-20deg);}
+        
+        .div11{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+        .div11:hover{
+            /* miring Y:vertical 10deg */
+            transform: skewY(10deg);} 
+            
+        .div12{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        } 
+        .div12:hover{
+            /* ukuranX:2 ,miringY:1, miringX:-1, ukuranY:0.2 pindah posisiX,Y:0.1,2 */
+            transform: matrix(2,1,-1,0.2,0.1,2);
+        } 
+        .div13{
+            margin: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+        } 
+        .div13:hover{
+            transform: skew(12deg,20deg) rotate(20deg) scale(1.5,1.2) translate(10px,20px);
+        }
+    </style>
+</head>
+<body>
+    <h1>The translate() Method</h1>
+<p>The translate() method moves an element from its current position:</p>
+
+<div class="div1">
+    This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+</div>
+<h1>The translate() X  values</h1>
+<div class="div2">
+    This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+</div>
+<h1>The translate() Y values</h1>
+<div class="div3">
+    This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+</div>
+<h2>The rotate() Function</h2>
+<div class="div4">This a normal div element</div>
+<div id="myDiv">This div element is rotated clockwise 20 degrees</div>
+<h1>The scale() Method</h1>
+<div class="div5">
+ This div element is two times of its original width, and three times of its original height
+</div>
+<h1>The scale() decreases</h1>
+<div class="div6">bayar bayar bayar mengecil sampai menjadi kecil</div>
+<h1>The scaleX() Function</h1>
+<div  class="div7">menemukan sesuatu Xang berarti </div>
+<h1>The scaleY() Function</h1>
+<div  class="div8">menemukan sesuatu Xang berarti </div>
+<h2>skew() Function</h2>
+<div class="div9">menemukan kelucuan dalam hidup</div>
+<h2>skewX() Function</h2>
+<div class="div10">menemukan kelucuan dalam hidup</div>
+<h2>skewY() Function</h2>
+<div class="div11">menemukan kelucuan dalam hidup</div>
+<h2>matrix () Function</h2>
+<div class="div12">menemukan kelucuan dalam hidup</div>
+<h2>all in</h2>
+<div class="div13">menemukan makna dalam kehidupan</div>
+
+</body>
+</html>
